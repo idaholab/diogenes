@@ -1,0 +1,79 @@
+VehicleID,Year,Make,Model,VehicleName,BatteryID,BatteryManufacturer,ChemistryType,NumofCells
+3,2013,Chevrolet,Malibu,Malibu Eco,6,Hitachi,Lithium-ion,32
+4,2013,Chevrolet,Malibu,Malibu Eco,6,Hitachi,Lithium-ion,32
+6,2013,Chevrolet,Malibu,Malibu Eco,6,Hitachi,Lithium-ion,32
+8,2013,Chevrolet,Volt,Volt,7,LG Chem,Lithium-ion,96
+9,2013,Chevrolet,Volt,Volt,7,LG Chem,Lithium-ion,96
+10,2013,Chevrolet,Volt,Volt,7,LG Chem,Lithium-ion,96
+11,2013,Ford,CMaxEnergi,C-Max Energi,11,Panasonic,Lithium-ion,84
+17,2013,Ford,CMaxHybrid,C-Max SE,12,Panasonic,Lithium-ion,76
+21,2012,Mitsubishi,iMiev,iMiev ES,5,GS Yuasa,Lithium-ion,88
+22,2012,Mitsubishi,iMiev,iMiev SE,5,GS Yuasa,Lithium-ion,88
+25,2013,Nissan,Leaf,Leaf S,1,AESC,Lithium-ion,96
+26,2013,Toyota,Prius,Prius Plug-in,14,Primearth EV Energy Co.,Lithium-ion,56
+27,2013,Toyota,Prius,Prius Plug-in,14,Primearth EV Energy Co.,Lithium-ion,56
+28,2013,Toyota,Prius,Prius Plug-in,14,Primearth EV Energy Co.,Lithium-ion,56
+29,2013,Toyota,Prius,Prius Plug-in,14,Primearth EV Energy Co.,Lithium-ion,56
+30,2013,Volkswagen,JettaHybrid,Jetta SE,17,Sanyo,Lithium-ion,60
+31,2013,Honda,CivicHybrid,Civic,3,Blue Energy,Lithium-ion,40
+32,2013,Honda,CivicHybrid,Civic,3,Blue Energy,Lithium-ion,40
+33,2013,Honda,CivicHybrid,Civic,3,Blue Energy,Lithium-ion,40
+34,2013,Honda,CivicHybrid,Civic,3,Blue Energy,Lithium-ion,40
+35,2013,Ford,CMaxEnergi,C-Max Energi,11,Panasonic,Lithium-ion,84
+36,2013,Ford,CMaxEnergi,C-Max Energi,11,Panasonic,Lithium-ion,84
+37,2013,Ford,CMaxEnergi,C-Max Energi,11,Panasonic,Lithium-ion,84
+38,2013,Ford,CMaxHybrid,C-Max SE,12,Panasonic,Lithium-ion,76
+39,2013,Ford,CMaxHybrid,C-Max SE,12,Panasonic,Lithium-ion,76
+40,2013,Ford,CMaxHybrid,C-Max SE,12,Panasonic,Lithium-ion,76
+41,2013,Nissan,Leaf,Leaf S,1,AESC,Lithium-ion,96
+42,2013,Nissan,Leaf,Leaf S,1,AESC,Lithium-ion,96
+43,2013,Nissan,Leaf,Leaf S,1,AESC,Lithium-ion,96
+44,2013,Ford,FocusEV,Focus Hatchback,8,LG Chem,Lithium-ion,86
+,2013,Ford,FocusEV,Focus Hatchback,8,LG Chem,Lithium-ion,86
+,2013,Ford,FocusEV,Focus Hatchback,8,LG Chem,Lithium-ion,86
+47,2013,Ford,FocusEV,Focus Hatchback,8,LG Chem,Lithium-ion,86
+48,2013,Ford,FusionEnergi,Fusion Energi SE,13,Panasonic,Lithium-ion,84
+49,2013,Ford,FusionEnergi,Fusion Energi SE,13,Panasonic,Lithium-ion,84
+50,2013,Ford,FusionEnergi,Fusion Energi SE,13,Panasonic,Lithium-ion,84
+51,2013,Ford,FusionEnergi,Fusion Energi SE,13,Panasonic,Lithium-ion,84
+52,2014,Volkswagen,JettaHybrid,Jetta SE,18,Sanyo,Lithium-ion,60
+53,2014,Volkswagen,JettaHybrid,Jetta SE,18,Sanyo,Lithium-ion,60
+54,2014,Volkswagen,JettaHybrid,Jetta SE,18,Sanyo,Lithium-ion,60
+55,2014,Smart,ElectricDriveCoupe,Electric Drive Coupe,4,Deutsche ACCUmotive/Li-Tec,Lithium-ion,93
+56,2014,Smart,ElectricDriveCoupe,Electric Drive Coupe,4,Deutsche ACCUmotive/Li-Tec,Lithium-ion,93
+57,2014,Smart,ElectricDriveCoupe,Electric Drive Coupe,4,Deutsche ACCUmotive/Li-Tec,Lithium-ion,93
+58,2014,Smart,ElectricDriveCoupe,Electric Drive Coupe,4,Deutsche ACCUmotive/Li-Tec,Lithium-ion,93
+68,2014,BMW,i3 REX,i3 REX,16,Samsung SDI,Lithium-ion,96
+69,2014,BMW,i3 REX,i3 REX,16,Samsung SDI,Lithium-ion,96
+70,2014,BMW,i3 REX,i3 REX,16,Samsung SDI,Lithium-ion,96
+71,2014,BMW,i3 REX,i3 REX,16,Samsung SDI,Lithium-ion,96
+72,2014,BMW,i3 EV,i3 EV,15,Samsung SDI,Lithium-ion,96
+73,2014,BMW,i3 EV,i3 EV,15,Samsung SDI,Lithium-ion,96
+74,2014,BMW,i3 EV,i3 EV,15,Samsung SDI,Lithium-ion,96
+75,2014,BMW,i3 EV,i3 EV,15,Samsung SDI,Lithium-ion,96
+76,2015,Kia,Soul,Soul,20,SK Innovation,Lithium-ion,96
+77,2015,Kia,Soul,Soul,20,SK Innovation,Lithium-ion,96
+78,2015,Kia,Soul,Soul,20,SK Innovation,Lithium-ion,96
+79,2015,Kia,Soul,Soul,20,SK Innovation,Lithium-ion,96
+80,2015,Chevrolet,Spark,Spark,9,LG Chem,Lithium-ion,96
+81,2015,Chevrolet,Spark,Spark,9,LG Chem,Lithium-ion,96
+82,2015,Chevrolet,Spark,Spark,9,LG Chem,Lithium-ion,96
+83,2015,Chevrolet,Spark,Spark,9,LG Chem,Lithium-ion,96
+84,2015,Honda,Accord,Accord,2,Blue Energy,Lithium-ion,72
+85,2015,Honda,Accord,Accord,2,Blue Energy,Lithium-ion,72
+86,2015,Honda,Accord,Accord,2,Blue Energy,Lithium-ion,72
+87,2015,Honda,Accord,Accord,2,Blue Energy,Lithium-ion,72
+88,2015,Volkswagen,E-Golf,E-Golf,19,Sanyo,Lithium-ion,88
+89,2015,Volkswagen,E-Golf,E-Golf,19,Sanyo,Lithium-ion,88
+90,2015,Volkswagen,E-Golf,E-Golf,19,Sanyo,Lithium-ion,88
+91,2015,Volkswagen,E-Golf,E-Golf,19,Sanyo,Lithium-ion,88
+92,2015,Mercedes,B-Class,B-Class,21,Tesla,Lithium-ion,3696
+93,2015,Mercedes,B-Class,B-Class,21,Tesla,Lithium-ion,3696
+94,2015,Mercedes,B-Class,B-Class,21,Tesla,Lithium-ion,3696
+95,2015,Mercedes,B-Class,B-Class,21,Tesla,Lithium-ion,3696
+100,2016,Chevrolet,Volt,Volt,10,LG Chem,Lithium-ion,96
+101,2016,Chevrolet,Volt,Volt,10,LG Chem,Lithium-ion,96
+102,2016,Chevrolet,Volt,Volt,10,LG Chem,Lithium-ion,96
+103,2016,Chevrolet,Volt,Volt,10,LG Chem,Lithium-ion,96
+103,2016,Chevrolet,Volt,Volt,10,LG Chem,Lithium-ion,96
+102,2016,Chevrolet,Volt,Volt,10,LG Chem,Lithium-ion,96

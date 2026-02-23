@@ -1,0 +1,4545 @@
+{
+  "name": "Placeholder",
+  "description": "Placeholder",
+  "modified": "Placeholder",
+  "authors": "Placeholder",
+  "objects": [
+    {
+      "name": "batteryList",
+      "description": "fill here",
+      "type": "table",
+      "count": 21,
+      "attributes": [
+        {
+          "name": "BatteryID",
+          "description": "Unique battery identifier",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "key",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            }
+          ]
+        },
+        {
+          "name": "BatteryManufacturer",
+          "description": "Battery manufacturer",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 12,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "LG Chem",
+                  "frequencyN": 4,
+                  "frequencyPercent": 19.048
+                },
+                {
+                  "name": "Sanyo",
+                  "frequencyN": 3,
+                  "frequencyPercent": 14.286
+                },
+                {
+                  "name": "Panasonic",
+                  "frequencyN": 3,
+                  "frequencyPercent": 14.286
+                },
+                {
+                  "name": "Blue Energy",
+                  "frequencyN": 2,
+                  "frequencyPercent": 9.524
+                },
+                {
+                  "name": "Samsung SDI",
+                  "frequencyN": 2,
+                  "frequencyPercent": 9.524
+                },
+                {
+                  "name": "Hitachi",
+                  "frequencyN": 1,
+                  "frequencyPercent": 4.762
+                },
+                {
+                  "name": "Tesla",
+                  "frequencyN": 1,
+                  "frequencyPercent": 4.762
+                },
+                {
+                  "name": "Deutsche ACCUmotive/Li-Tec",
+                  "frequencyN": 1,
+                  "frequencyPercent": 4.762
+                },
+                {
+                  "name": "SK Innovation",
+                  "frequencyN": 1,
+                  "frequencyPercent": 4.762
+                },
+                {
+                  "name": "Primearth EV Energy Co.",
+                  "frequencyN": 1,
+                  "frequencyPercent": 4.762
+                },
+                {
+                  "name": "GS Yuasa",
+                  "frequencyN": 1,
+                  "frequencyPercent": 4.762
+                },
+                {
+                  "name": "AESC",
+                  "frequencyN": 1,
+                  "frequencyPercent": 4.762
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ChemistryType",
+          "description": "Battery chemistry type",
+          "type": "string",
+          "units": "n/a",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 1,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "Lithium-ion",
+                  "frequencyN": 21,
+                  "frequencyPercent": 100.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "NumofCells",
+          "description": "Number of cells in the battery",
+          "type": "integer",
+          "units": "cells",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 32,
+              "units": "cells",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 3696,
+              "units": "cells",
+              "description": "Maximum value for attribute/column"
+            }
+          ]
+        },
+        {
+          "name": "NominalCellVoltage",
+          "description": "Nominal cell voltage",
+          "type": "number",
+          "units": "V",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 3.57,
+              "units": "V",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 3.75,
+              "units": "V",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 3.676666666666667,
+              "units": "V",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 3.7,
+              "units": "V",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 0.05112077203381555,
+              "units": "V",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -0.85857,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.25448,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "NominalSystemVoltage",
+          "description": "Nominal voltage for the complete battery",
+          "type": "number",
+          "units": "V",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 115.2,
+              "units": "V",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 360.0,
+              "units": "V",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 293.9190476190476,
+              "units": "V",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 318.2,
+              "units": "V",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 73.19163626431384,
+              "units": "V",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -1.21973,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0.6338,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "RatedPackCapacity_Ah",
+          "description": "Rated battery pack capacity",
+          "type": "number",
+          "units": "Ah",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 4.4,
+              "units": "Ah",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 93.0,
+              "units": "Ah",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 40.84761904761905,
+              "units": "Ah",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 50.0,
+              "units": "Ah",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 28.861784751598766,
+              "units": "Ah",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.00688,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -1.31571,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "RatedPackEnergy_kWh",
+          "description": "Rated battery pack energy",
+          "type": "number",
+          "units": "kWh",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 0.5,
+              "units": "kWh",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 28.0,
+              "units": "kWh",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 13.189523809523811,
+              "units": "kWh",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 16.5,
+              "units": "kWh",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 9.83050887604018,
+              "units": "kWh",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -0.09864,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -1.58634,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "CellVmin_V",
+          "description": "Minimum cell voltage",
+          "type": "number",
+          "units": "V",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 2.5,
+              "units": "V",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 3.0,
+              "units": "V",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 2.8285714285714287,
+              "units": "V",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 3.0,
+              "units": "V",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 0.2165475863242468,
+              "units": "V",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -0.66464,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -1.38127,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "CellVmax_V",
+          "description": "Maximum cell voltage",
+          "type": "number",
+          "units": "V",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 4.1,
+              "units": "V",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 4.3,
+              "units": "V",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 4.166190476190477,
+              "units": "V",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 4.15,
+              "units": "V",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 0.0505446525832547,
+              "units": "V",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.53201,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0.91787,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "ThermalManagement",
+          "description": "Battery thermal management system",
+          "type": "string",
+          "units": "n/a",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "Active - Forced Air",
+                  "frequencyN": 10,
+                  "frequencyPercent": 47.619
+                },
+                {
+                  "name": "Active-Liquid Cooled",
+                  "frequencyN": 6,
+                  "frequencyPercent": 28.571
+                },
+                {
+                  "name": "Refrigerant Cooled",
+                  "frequencyN": 2,
+                  "frequencyPercent": 9.524
+                },
+                {
+                  "name": "Passive",
+                  "frequencyN": 2,
+                  "frequencyPercent": 9.524
+                },
+                {
+                  "name": "Active - Air Cooled",
+                  "frequencyN": 1,
+                  "frequencyPercent": 4.762
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PackWeight_lb",
+          "description": "Battery pack weight",
+          "type": "integer",
+          "units": "lbs",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 48,
+              "units": "lbs",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 690,
+              "units": "lbs",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 351.9047619047619,
+              "units": "lbs",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 403.0,
+              "units": "lbs",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 220.83883371406958,
+              "units": "lbs",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -0.01968,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -1.37219,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "PHEVAECSTarget_Wh",
+          "description": "(tbd)",
+          "type": "integer",
+          "units": "Wh",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 300.0,
+              "units": "Wh",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 500.0,
+              "units": "Wh",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 340.0,
+              "units": "Wh",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 300.0,
+              "units": "Wh",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 89.44271909999159,
+              "units": "Wh",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 2.23607,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 5.0,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "PHEVAECDTarget_Wh",
+          "description": "(tbd)",
+          "type": "integer",
+          "units": "Wh",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 3400.0,
+              "units": "Wh",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 11600.0,
+              "units": "Wh",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 7640.0,
+              "units": "Wh",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 5800.0,
+              "units": "Wh",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 3745.3971752005154,
+              "units": "Wh",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.28164,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -2.67728,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "PHEVPDischargeTarget_W",
+          "description": "(tbd)",
+          "type": "integer",
+          "units": "W",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 37000.0,
+              "units": "W",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 45000.0,
+              "units": "W",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 39000.0,
+              "units": "W",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 38000.0,
+              "units": "W",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 3391.164991562634,
+              "units": "W",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 2.11547,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 4.57089,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "PHEVPChargeTarget_W",
+          "description": "(tbd)",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 25000.0,
+              "units": "W",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 30000.0,
+              "units": "W",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 26000.0,
+              "units": "W",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 25000.0,
+              "units": "W",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 2236.06797749979,
+              "units": "W",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 2.23607,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 5.0,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "PHEVTargetCategory",
+          "description": "(tbd)",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 3,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "Maximum",
+                  "frequencyN": 2,
+                  "frequencyPercent": 9.524
+                },
+                {
+                  "name": "Medium",
+                  "frequencyN": 2,
+                  "frequencyPercent": 9.524
+                },
+                {
+                  "name": "Minimum",
+                  "frequencyN": 1,
+                  "frequencyPercent": 4.762
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HEVPDischargeTarget_W",
+          "description": "(tbd)",
+          "type": "integer",
+          "units": "W",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 6,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 25000.0,
+              "units": "W",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 25000.0,
+              "units": "W",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 25000.0,
+              "units": "W",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 25000.0,
+              "units": "W",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 0.0,
+              "units": "W",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "HEVAETarget_Wh",
+          "description": "(tbd)",
+          "type": "integer",
+          "units": "Wh",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 6,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 300.0,
+              "units": "Wh",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 300.0,
+              "units": "Wh",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 300.0,
+              "units": "Wh",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 300.0,
+              "units": "Wh",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 0.0,
+              "units": "Wh",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "HEVTargetCategory",
+          "description": "(tbd)",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 6,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 1,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "Minimum",
+                  "frequencyN": 6,
+                  "frequencyPercent": 28.571
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HEVPChargeTarget_W",
+          "description": "(tbd)",
+          "type": "integer",
+          "units": "W",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 6,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 20000.0,
+              "units": "W",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 20000.0,
+              "units": "W",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 20000.0,
+              "units": "W",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 20000.0,
+              "units": "W",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 0.0,
+              "units": "W",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "PackVmax_V",
+          "description": "Maximum battery pack voltage",
+          "type": "number",
+          "units": "V",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 131.2,
+              "units": "V",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 403.2,
+              "units": "V",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 308.4666666666667,
+              "units": "V",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 352.0,
+              "units": "V",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 85.25881381612889,
+              "units": "V",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -0.63389,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.79751,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "PackVmin_V",
+          "description": "Minimum battery pack voltage",
+          "type": "number",
+          "units": "V",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 96.0,
+              "units": "V",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 412.8,
+              "units": "V",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 249.2761904761905,
+              "units": "V",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 252.0,
+              "units": "V",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 81.75973278308768,
+              "units": "V",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.1127,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0.30149,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "ApproximatePackVol_L",
+          "description": "Approximate battery pack volume",
+          "type": "number",
+          "units": "L",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 21,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 17.55,
+              "units": "L",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 350.6,
+              "units": "L",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 150.8152380952381,
+              "units": "L",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 143.3,
+              "units": "L",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 94.97435404460761,
+              "units": "L",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.24377,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.65198,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        }
+      ]
+    },
+    { 
+      "name": "batteryTestData",
+      "description": "fill here",
+      "type": "table",
+      "count": 1587141,
+      "attributes": [
+        {
+          "name": "VehicleID",
+          "description": "Unique vehicle identifier",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "key",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1587141,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            }
+          ],
+          "refersTo": "vehicleList.VehicleID"
+        },
+        {
+          "name": "VehicleYear",
+          "description": "Vehicle model year",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1587141,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "2015",
+                  "frequencyN": 567309,
+                  "frequencyPercent": 35.744
+                },
+                {
+                  "name": "2013",
+                  "frequencyN": 505695,
+                  "frequencyPercent": 31.862
+                },
+                {
+                  "name": "2014",
+                  "frequencyN": 418311,
+                  "frequencyPercent": 26.356
+                },
+                {
+                  "name": "2012",
+                  "frequencyN": 58193,
+                  "frequencyPercent": 3.667
+                },
+                {
+                  "name": "2016",
+                  "frequencyN": 37633,
+                  "frequencyPercent": 2.371
+                }
+              ]
+            },
+            {
+              "name": "Minimum Value",
+              "value": 2012,
+              "units": "n/a",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 2016,
+              "units": "n/a",
+              "description": "Maximum value for attribute/column"
+            }
+          ]
+        },
+        {
+          "name": "VehicleMake",
+          "description": "Vehicle make/manufacturer name",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1587141,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 11,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "BMW",
+                  "frequencyN": 269223,
+                  "frequencyPercent": 16.963
+                },
+                {
+                  "name": "Chevrolet",
+                  "frequencyN": 240567,
+                  "frequencyPercent": 15.157
+                },
+                {
+                  "name": "Ford",
+                  "frequencyN": 231098,
+                  "frequencyPercent": 14.561
+                },
+                {
+                  "name": "Volkswagen",
+                  "frequencyN": 153824,
+                  "frequencyPercent": 9.692
+                },
+                {
+                  "name": "Mercedes",
+                  "frequencyN": 153076,
+                  "frequencyPercent": 9.645
+                },
+                {
+                  "name": "Kia",
+                  "frequencyN": 141271,
+                  "frequencyPercent": 8.901
+                },
+                {
+                  "name": "Nissan",
+                  "frequencyN": 140268,
+                  "frequencyPercent": 8.838
+                },
+                {
+                  "name": "Smart",
+                  "frequencyN": 127535,
+                  "frequencyPercent": 8.036
+                },
+                {
+                  "name": "Honda",
+                  "frequencyN": 68728,
+                  "frequencyPercent": 4.33
+                },
+                {
+                  "name": "Mitsubishi",
+                  "frequencyN": 58193,
+                  "frequencyPercent": 3.667
+                },
+                {
+                  "name": "Toyota",
+                  "frequencyN": 3358,
+                  "frequencyPercent": 0.212
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "VehicleModel",
+          "description": "Vehicle model name",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1587141,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 19,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "i3 REX",
+                  "frequencyN": 154095,
+                  "frequencyPercent": 9.709
+                },
+                {
+                  "name": "B-Class",
+                  "frequencyN": 153076,
+                  "frequencyPercent": 9.645
+                },
+                {
+                  "name": "Soul",
+                  "frequencyN": 141271,
+                  "frequencyPercent": 8.901
+                },
+                {
+                  "name": "Leaf",
+                  "frequencyN": 140268,
+                  "frequencyPercent": 8.838
+                },
+                {
+                  "name": "ElectricDriveCoupe",
+                  "frequencyN": 127535,
+                  "frequencyPercent": 8.036
+                },
+                {
+                  "name": "FocusEV",
+                  "frequencyN": 123343,
+                  "frequencyPercent": 7.771
+                },
+                {
+                  "name": "E-Golf",
+                  "frequencyN": 122532,
+                  "frequencyPercent": 7.72
+                },
+                {
+                  "name": "Spark",
+                  "frequencyN": 122067,
+                  "frequencyPercent": 7.691
+                },
+                {
+                  "name": "i3 EV",
+                  "frequencyN": 115128,
+                  "frequencyPercent": 7.254
+                },
+                {
+                  "name": "Volt",
+                  "frequencyN": 97140,
+                  "frequencyPercent": 6.12
+                },
+                {
+                  "name": "iMiev",
+                  "frequencyN": 58193,
+                  "frequencyPercent": 3.667
+                },
+                {
+                  "name": "CMaxHybrid",
+                  "frequencyN": 43297,
+                  "frequencyPercent": 2.728
+                },
+                {
+                  "name": "CivicHybrid",
+                  "frequencyN": 40365,
+                  "frequencyPercent": 2.543
+                },
+                {
+                  "name": "FusionEnergi",
+                  "frequencyN": 33562,
+                  "frequencyPercent": 2.115
+                },
+                {
+                  "name": "JettaHybrid",
+                  "frequencyN": 31292,
+                  "frequencyPercent": 1.972
+                },
+                {
+                  "name": "CMaxEnergi",
+                  "frequencyN": 30896,
+                  "frequencyPercent": 1.947
+                },
+                {
+                  "name": "Accord",
+                  "frequencyN": 28363,
+                  "frequencyPercent": 1.787
+                },
+                {
+                  "name": "Malibu",
+                  "frequencyN": 21360,
+                  "frequencyPercent": 1.346
+                },
+                {
+                  "name": "Prius",
+                  "frequencyN": 3358,
+                  "frequencyPercent": 0.212
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "BatteryID",
+          "description": "Unique battery identifier",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "key",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1587141,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            }
+          ],
+          "refersTo": "batteryList.BatteryID"
+        },
+        {
+          "name": "BatteryManufacturer",
+          "description": "Battery manufacturer",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1587141,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 12,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "LG Chem",
+                  "frequencyN": 342550,
+                  "frequencyPercent": 21.583
+                },
+                {
+                  "name": "Samsung SDI",
+                  "frequencyN": 269223,
+                  "frequencyPercent": 16.963
+                },
+                {
+                  "name": "Sanyo",
+                  "frequencyN": 153824,
+                  "frequencyPercent": 9.692
+                },
+                {
+                  "name": "Tesla",
+                  "frequencyN": 153076,
+                  "frequencyPercent": 9.645
+                },
+                {
+                  "name": "SK Innovation",
+                  "frequencyN": 141271,
+                  "frequencyPercent": 8.901
+                },
+                {
+                  "name": "AESC",
+                  "frequencyN": 140268,
+                  "frequencyPercent": 8.838
+                },
+                {
+                  "name": "Deutsche ACCUmotive/Li-Tec",
+                  "frequencyN": 127535,
+                  "frequencyPercent": 8.036
+                },
+                {
+                  "name": "Panasonic",
+                  "frequencyN": 107755,
+                  "frequencyPercent": 6.789
+                },
+                {
+                  "name": "Blue Energy",
+                  "frequencyN": 68728,
+                  "frequencyPercent": 4.33
+                },
+                {
+                  "name": "GS Yuasa",
+                  "frequencyN": 58193,
+                  "frequencyPercent": 3.667
+                },
+                {
+                  "name": "Hitachi",
+                  "frequencyN": 21360,
+                  "frequencyPercent": 1.346
+                },
+                {
+                  "name": "Primearth EV Energy Co.",
+                  "frequencyN": 3358,
+                  "frequencyPercent": 0.212
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DataID",
+          "description": "Unique record identifier",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "key",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1587141,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            }
+          ]
+        },
+        {
+          "name": "RatedCapacity_Ah",
+          "description": "Rated capacity",
+          "type": "number",
+          "units": "Ah",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1587141,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 4.4,
+              "units": "Ah",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 93.0,
+              "units": "Ah",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 57.8404890302331,
+              "units": "Ah",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 60.0,
+              "units": "Ah",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 23.395651511250662,
+              "units": "Ah",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -0.89682,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0.44842,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "BeginDischrgPulseCapDischrg_Ah",
+          "description": "Beginning discharge pulse capacity discharge",
+          "type": "number",
+          "units": "Ah",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 0.0,
+              "units": "Ah",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 83.71,
+              "units": "Ah",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 19.69719418306246,
+              "units": "Ah",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 14.71,
+              "units": "Ah",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 18.496465253378066,
+              "units": "Ah",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 1.01101,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0.27361,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "BeginDischrgPulseVoltage_V",
+          "description": "Beginning discharge pulse voltage",
+          "type": "number",
+          "units": "V",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 98.26,
+              "units": "V",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 412.0,
+              "units": "V",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 299.21426432848534,
+              "units": "V",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 325.85,
+              "units": "V",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 80.82709154692648,
+              "units": "V",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -1.03151,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.04405,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "EndDischrgPulseVoltage_V",
+          "description": "Ending discharge pulse voltage",
+          "type": "number",
+          "units": "V",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 95.97,
+              "units": "V",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 403.6,
+              "units": "V",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 291.11709580838374,
+              "units": "V",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 316.25,
+              "units": "V",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 80.0020970440291,
+              "units": "V",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -0.98492,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.13507,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "AvgDischrgPulseCurrent_A",
+          "description": "Average discharge pulse current",
+          "type": "number",
+          "units": "A",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 15.67,
+              "units": "A",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 124.9,
+              "units": "A",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 61.2879982891359,
+              "units": "A",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 66.2,
+              "units": "A",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 27.498165545317814,
+              "units": "A",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.21969,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.26121,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "BeginChrgPulseCapDischrg_Ah",
+          "description": "Beginning charge pulse capacity discharge",
+          "type": "number",
+          "units": "Ah",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 0.19,
+              "units": "Ah",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 84.48,
+              "units": "Ah",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 20.030470487596485,
+              "units": "Ah",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 15.05,
+              "units": "Ah",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 18.648589393981247,
+              "units": "Ah",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 1.00468,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0.26624,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "BeginChrgPulseVoltage_V",
+          "description": "Beginning charge pulse voltage",
+          "type": "number",
+          "units": "V",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 97.5,
+              "units": "V",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 409.6,
+              "units": "V",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 297.7325235243799,
+              "units": "V",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 324.5,
+              "units": "V",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 80.71864148423215,
+              "units": "V",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -1.02417,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.0577,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "EndChrgPulseVoltage_V",
+          "description": "Ending charge pulse voltage",
+          "type": "number",
+          "units": "V",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 101.1,
+              "units": "V",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 413.0,
+              "units": "V",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 303.2192386655261,
+              "units": "V",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 331.35,
+              "units": "V",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 81.04090374641873,
+              "units": "V",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -1.05945,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0.01508,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "AvgChrgPulseCurrent_A",
+          "description": "Average charge pulse current",
+          "type": "number",
+          "units": "A",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 15.11,
+              "units": "A",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 93.7,
+              "units": "A",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 45.797626176219104,
+              "units": "A",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 49.65,
+              "units": "A",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 20.626687650773594,
+              "units": "A",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.24466,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.27543,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "DischrgDOD",
+          "description": "Discharge depth of discharge",
+          "type": "number",
+          "units": "percent",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 0.0,
+              "units": "percent",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 90.35,
+              "units": "percent",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 48.077467921300446,
+              "units": "percent",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 50.0,
+              "units": "percent",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 25.47090518697976,
+              "units": "percent",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.02629,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -1.1636,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "BeginDischrgPulseEnergyDischrg_kWh",
+          "description": "Beginning discharge pulse energy discharge",
+          "type": "number",
+          "units": "kWh",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 0.0,
+              "units": "kWh",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 26.13,
+              "units": "kWh",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 6.799692044482469,
+              "units": "kWh",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 4.885,
+              "units": "kWh",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 6.56110205978264,
+              "units": "kWh",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.86219,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.30247,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "CalcDischrgResistance_Ohm",
+          "description": "Calculated discharge resistance",
+          "type": "number",
+          "units": "Ohms",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 0.07,
+              "units": "Ohms",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 0.87,
+              "units": "Ohms",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 0.14748075278015355,
+              "units": "Ohms",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 0.14,
+              "units": "Ohms",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 0.06098696744790405,
+              "units": "Ohms",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 2.51918,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 14.5142,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "CalcDischrgPwrCap_kW",
+          "description": "Calculated discharge power capacity",
+          "type": "number",
+          "units": "kWh",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 1.49,
+              "units": "kWh",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 421.59,
+              "units": "kWh",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 140.32695466210401,
+              "units": "kWh",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 124.465,
+              "units": "kWh",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 94.4496401093249,
+              "units": "kWh",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.46586,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.77601,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "ChrgDOD",
+          "description": "Charge depth of discharge",
+          "type": "number",
+          "units": "percent",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 0.0,
+              "units": "percent",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 912.0,
+              "units": "percent",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 51.34950812660503,
+              "units": "percent",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 50.83,
+              "units": "percent",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 44.14334119064654,
+              "units": "percent",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 10.21475,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 165.20892,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "BeginChrgPulseEnergyDischrg_kWh",
+          "description": "Beginning charge pulse energy discharge",
+          "type": "number",
+          "units": "kWh",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 0.06,
+              "units": "kWh",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 26.35,
+              "units": "kWh",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 6.906830624465369,
+              "units": "kWh",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 4.945,
+              "units": "kWh",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 6.611886568476977,
+              "units": "kWh",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.85409,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.3132,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "CalcChrgResistance_ohm",
+          "description": "Calculated charge resistance",
+          "type": "number",
+          "units": "Ohms",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2338,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 0.06,
+              "units": "Ohms",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 1.02,
+              "units": "Ohms",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 0.13523524379811871,
+              "units": "Ohms",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 0.12,
+              "units": "Ohms",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 0.06158066473771107,
+              "units": "Ohms",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 2.80262,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 22.21301,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "CalcChrgPwrCapability_kW",
+          "description": "Calculated charge power capability",
+          "type": "number",
+          "units": "kW",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 2334,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 3.28,
+              "units": "kW",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 442.1,
+              "units": "kW",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 105.88337617823507,
+              "units": "kW",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 86.195,
+              "units": "kW",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 80.67758623390806,
+              "units": "kW",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 1.09642,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 1.09632,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "CapacityRemoved_Ah",
+          "description": "Capacity removed",
+          "type": "number",
+          "units": "Ah",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1584470,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": -114.38,
+              "units": "Ah",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 5.14,
+              "units": "Ah",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": -28.693101655441975,
+              "units": "Ah",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": -25.06,
+              "units": "Ah",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 22.734667016821035,
+              "units": "Ah",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -0.85561,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0.45066,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "EnergyRemoved_kWh",
+          "description": "Energy removed",
+          "type": "number",
+          "units": "kWh",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1584470,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": -34.56,
+              "units": "kWh",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 1.31,
+              "units": "kWh",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": -10.059504938559913,
+              "units": "kWh",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": -9.15,
+              "units": "kWh",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 7.645913957366989,
+              "units": "kWh",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -0.58683,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.3418,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "Current_A",
+          "description": "Current",
+          "type": "number",
+          "units": "Ah",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1584470,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": -52.06,
+              "units": "Ah",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 22.13,
+              "units": "Ah",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": -21.282809589311807,
+              "units": "Ah",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": -22.04,
+              "units": "Ah",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 8.760176855597454,
+              "units": "Ah",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.92369,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 4.45634,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "Voltage",
+          "description": "Voltage",
+          "type": "number",
+          "units": "V",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1584267,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 95.9,
+              "units": "V",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 410.85,
+              "units": "V",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 328.81122603072447,
+              "units": "V",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 338.6,
+              "units": "V",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 54.9365597393914,
+              "units": "V",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -1.95669,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 4.72293,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "EventID",
+          "description": "Unique test event identifier",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "key",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1587141,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            }
+          ]
+        },
+        {
+          "name": "UseableEnergyCD_wh",
+          "description": "Usable energy CD",
+          "type": "number",
+          "units": "Wh",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 589,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": -250.0,
+              "units": "Wh",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 12799.35,
+              "units": "Wh",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 3702.3881324278427,
+              "units": "Wh",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 2706.0,
+              "units": "Wh",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 3447.3922589999106,
+              "units": "Wh",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 1.0804,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0.41118,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "UseableEnergyCS_wh",
+          "description": "Usable energy CS",
+          "type": "number",
+          "units": "Wh",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 842,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": -11450.0,
+              "units": "Wh",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 1499.35,
+              "units": "Wh",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": -2093.7553800475052,
+              "units": "Wh",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": -1051.5,
+              "units": "Wh",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 3013.412286130074,
+              "units": "Wh",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -1.35352,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 1.36611,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "DepthOfDischrg_Pct",
+          "description": "Depth of discharge",
+          "type": "number",
+          "units": "Percent",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 1297844,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": -120.98,
+              "units": "Percent",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 102.8,
+              "units": "Percent",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": -48.386354739086336,
+              "units": "Percent",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": -47.6,
+              "units": "Percent",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 29.36020244258123,
+              "units": "Percent",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -0.02266,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.53939,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "ScaledChrgPwrCap_kW",
+          "description": "Scaled charge power capability",
+          "type": "number",
+          "units": "kW",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 590,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 4.1,
+              "units": "kW",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 116.37,
+              "units": "kW",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 39.85944067796608,
+              "units": "kW",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 34.995,
+              "units": "kW",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 26.27983826068019,
+              "units": "kW",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.87132,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0.13496,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "batteryTestSummary",
+      "description": "fill here",
+      "type": "table",
+      "count": 272,
+      "attributes": [
+        {
+          "name": "VehicleID",
+          "description": "Unique vehicle identifier",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "key",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 272,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            }
+          ],
+          "refersTo": "vehicleList.VehicleID"
+        },
+        {
+          "name": "Year",
+          "description": "Vehicle model year",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 272,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 6,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "2013",
+                  "frequencyN": 146,
+                  "frequencyPercent": 53.676
+                },
+                {
+                  "name": "2015",
+                  "frequencyN": 59,
+                  "frequencyPercent": 21.691
+                },
+                {
+                  "name": "2014",
+                  "frequencyN": 46,
+                  "frequencyPercent": 16.912
+                },
+                {
+                  "name": "2016",
+                  "frequencyN": 8,
+                  "frequencyPercent": 2.941
+                },
+                {
+                  "name": "2012",
+                  "frequencyN": 7,
+                  "frequencyPercent": 2.574
+                },
+                {
+                  "name": "2011",
+                  "frequencyN": 6,
+                  "frequencyPercent": 2.206
+                }
+              ]
+            },
+            {
+              "name": "Minimum Value",
+              "value": 2011,
+              "units": "n/a",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 2016,
+              "units": "n/a",
+              "description": "Maximum value for attribute/column"
+            }
+          ]
+        },
+        {
+          "name": "Make",
+          "description": "Vehicle make/manufacturer name",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 272,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 11,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "Chevrolet",
+                  "frequencyN": 62,
+                  "frequencyPercent": 22.794
+                },
+                {
+                  "name": "Ford",
+                  "frequencyN": 57,
+                  "frequencyPercent": 20.956
+                },
+                {
+                  "name": "Honda",
+                  "frequencyN": 29,
+                  "frequencyPercent": 10.662
+                },
+                {
+                  "name": "BMW",
+                  "frequencyN": 27,
+                  "frequencyPercent": 9.926
+                },
+                {
+                  "name": "Volkswagen",
+                  "frequencyN": 23,
+                  "frequencyPercent": 8.456
+                },
+                {
+                  "name": "Toyota",
+                  "frequencyN": 17,
+                  "frequencyPercent": 6.25
+                },
+                {
+                  "name": "Nissan",
+                  "frequencyN": 15,
+                  "frequencyPercent": 5.515
+                },
+                {
+                  "name": "Mercedes",
+                  "frequencyN": 12,
+                  "frequencyPercent": 4.412
+                },
+                {
+                  "name": "Kia",
+                  "frequencyN": 12,
+                  "frequencyPercent": 4.412
+                },
+                {
+                  "name": "Smart",
+                  "frequencyN": 11,
+                  "frequencyPercent": 4.044
+                },
+                {
+                  "name": "Mitsubishi",
+                  "frequencyN": 7,
+                  "frequencyPercent": 2.574
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Model",
+          "description": "Vehicle model name",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 272,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 19,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "Volt",
+                  "frequencyN": 34,
+                  "frequencyPercent": 12.5
+                },
+                {
+                  "name": "CivicHybrid",
+                  "frequencyN": 18,
+                  "frequencyPercent": 6.618
+                },
+                {
+                  "name": "Prius",
+                  "frequencyN": 17,
+                  "frequencyPercent": 6.25
+                },
+                {
+                  "name": "Malibu",
+                  "frequencyN": 16,
+                  "frequencyPercent": 5.882
+                },
+                {
+                  "name": "CMaxEnergi",
+                  "frequencyN": 15,
+                  "frequencyPercent": 5.515
+                },
+                {
+                  "name": "FusionEnergi",
+                  "frequencyN": 15,
+                  "frequencyPercent": 5.515
+                },
+                {
+                  "name": "i3 REX",
+                  "frequencyN": 15,
+                  "frequencyPercent": 5.515
+                },
+                {
+                  "name": "CMaxHybrid",
+                  "frequencyN": 15,
+                  "frequencyPercent": 5.515
+                },
+                {
+                  "name": "Leaf",
+                  "frequencyN": 15,
+                  "frequencyPercent": 5.515
+                },
+                {
+                  "name": "Soul",
+                  "frequencyN": 12,
+                  "frequencyPercent": 4.412
+                },
+                {
+                  "name": "E-Golf",
+                  "frequencyN": 12,
+                  "frequencyPercent": 4.412
+                },
+                {
+                  "name": "i3 EV",
+                  "frequencyN": 12,
+                  "frequencyPercent": 4.412
+                },
+                {
+                  "name": "FocusEV",
+                  "frequencyN": 12,
+                  "frequencyPercent": 4.412
+                },
+                {
+                  "name": "B-Class",
+                  "frequencyN": 12,
+                  "frequencyPercent": 4.412
+                },
+                {
+                  "name": "Spark",
+                  "frequencyN": 12,
+                  "frequencyPercent": 4.412
+                },
+                {
+                  "name": "ElectricDriveCoupe",
+                  "frequencyN": 11,
+                  "frequencyPercent": 4.044
+                },
+                {
+                  "name": "JettaHybrid",
+                  "frequencyN": 11,
+                  "frequencyPercent": 4.044
+                },
+                {
+                  "name": "Accord",
+                  "frequencyN": 11,
+                  "frequencyPercent": 4.044
+                },
+                {
+                  "name": "iMiev",
+                  "frequencyN": 7,
+                  "frequencyPercent": 2.574
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "BatteryID",
+          "description": "Unique battery identifier",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 266,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            }
+          ],
+          "refersTo": "batteryList.BatteryID"
+        },
+        {
+          "name": "BatteryManufacturer",
+          "description": "Battery manufacturer",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 266,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 12,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "LG Chem",
+                  "frequencyN": 52,
+                  "frequencyPercent": 19.118
+                },
+                {
+                  "name": "Panasonic",
+                  "frequencyN": 45,
+                  "frequencyPercent": 16.544
+                },
+                {
+                  "name": "Blue Energy",
+                  "frequencyN": 29,
+                  "frequencyPercent": 10.662
+                },
+                {
+                  "name": "Samsung SDI",
+                  "frequencyN": 27,
+                  "frequencyPercent": 9.926
+                },
+                {
+                  "name": "Sanyo",
+                  "frequencyN": 23,
+                  "frequencyPercent": 8.456
+                },
+                {
+                  "name": "Primearth EV Energy Co.",
+                  "frequencyN": 17,
+                  "frequencyPercent": 6.25
+                },
+                {
+                  "name": "Hitachi",
+                  "frequencyN": 16,
+                  "frequencyPercent": 5.882
+                },
+                {
+                  "name": "AESC",
+                  "frequencyN": 15,
+                  "frequencyPercent": 5.515
+                },
+                {
+                  "name": "SK Innovation",
+                  "frequencyN": 12,
+                  "frequencyPercent": 4.412
+                },
+                {
+                  "name": "Tesla",
+                  "frequencyN": 12,
+                  "frequencyPercent": 4.412
+                },
+                {
+                  "name": "Deutsche ACCUmotive/Li-Tec",
+                  "frequencyN": 11,
+                  "frequencyPercent": 4.044
+                },
+                {
+                  "name": "GS Yuasa",
+                  "frequencyN": 7,
+                  "frequencyPercent": 2.574
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ICD_Number",
+          "description": "ICD number",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 272,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "0",
+                  "frequencyN": 79,
+                  "frequencyPercent": 29.044
+                },
+                {
+                  "name": "1",
+                  "frequencyN": 78,
+                  "frequencyPercent": 28.676
+                },
+                {
+                  "name": "2",
+                  "frequencyN": 72,
+                  "frequencyPercent": 26.471
+                },
+                {
+                  "name": "3",
+                  "frequencyN": 33,
+                  "frequencyPercent": 12.132
+                },
+                {
+                  "name": "4",
+                  "frequencyN": 10,
+                  "frequencyPercent": 3.676
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ICD",
+          "description": "ICD name",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 272,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "BOT",
+                  "frequencyN": 79,
+                  "frequencyPercent": 29.044
+                },
+                {
+                  "name": "ICD1",
+                  "frequencyN": 78,
+                  "frequencyPercent": 28.676
+                },
+                {
+                  "name": "ICD2",
+                  "frequencyN": 72,
+                  "frequencyPercent": 26.471
+                },
+                {
+                  "name": "ICD3",
+                  "frequencyN": 33,
+                  "frequencyPercent": 12.132
+                },
+                {
+                  "name": "EOT",
+                  "frequencyN": 10,
+                  "frequencyPercent": 3.676
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vehicle_Odometer_miles",
+          "description": "Vehicle odometer at time of test",
+          "type": "integer",
+          "units": "miles",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 272,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 380.8,
+              "units": "miles",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 205121.0,
+              "units": "miles",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 39889.006617647065,
+              "units": "miles",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 12012.0,
+              "units": "miles",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 51027.35751401378,
+              "units": "miles",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 1.33133,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0.56359,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "Date_Of_Test",
+          "description": "Date of test",
+          "type": "date",
+          "units": "n/a",
+          "dataQualityClass": "date",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 272,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": "2012-12-13",
+              "units": "n/a",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": "2016-11-22",
+              "units": "n/a",
+              "description": "Maximum value for attribute/column"
+            }
+          ]
+        },
+        {
+          "name": "Measured_Average_Capacity_Ah",
+          "description": "Measured average capacity",
+          "type": "number",
+          "units": "Ah",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 272,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 3.42,
+              "units": "Ah",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 114.4,
+              "units": "Ah",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 39.218492647058795,
+              "units": "Ah",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 42.81,
+              "units": "Ah",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 28.77792105979741,
+              "units": "Ah",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.47425,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.39054,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "Measured_Average_Energy_Capacity_kWh",
+          "description": "Measured average energy capacity",
+          "type": "number",
+          "units": "kWh",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 272,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 0.39,
+              "units": "kWh",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 34.56,
+              "units": "kWh",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 13.035808823529415,
+              "units": "kWh",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 15.21,
+              "units": "kWh",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 9.930681597038891,
+              "units": "kWh",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.20031,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.99,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "Discharge_30s__Power_Capability_at_80pct_DOD_kW",
+          "description": "Discharge 30s power capability at 80% depth of discharge",
+          "type": "number",
+          "units": "kW",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 180,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 10.96,
+              "units": "kW",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 278.62,
+              "units": "kW",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 102.80888888888892,
+              "units": "kW",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 103.39,
+              "units": "kW",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 66.29300503127739,
+              "units": "kW",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 0.60123,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -0.144,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "Charge_10s_Power_Capability_at_20pct_DOD_kW",
+          "description": "Charge 10s power capability at 20% depth of discharge",
+          "type": "number",
+          "units": "kW",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 185,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 13.17,
+              "units": "kW",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 182.38,
+              "units": "kW",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 60.535621621621615,
+              "units": "kW",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 54.4,
+              "units": "kW",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 33.152101198533266,
+              "units": "kW",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 1.06858,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 1.46123,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "CD_Usable_Energy_Wh",
+          "description": "CD usable energy",
+          "type": "number",
+          "units": "Wh",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 66,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": -1512.96,
+              "units": "Wh",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 1199.35,
+              "units": "Wh",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 78.0363636363637,
+              "units": "Wh",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 371.0,
+              "units": "Wh",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 887.797427387467,
+              "units": "Wh",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -0.14235,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -1.40803,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        },
+        {
+          "name": "CS_Usable_Energy_Wh",
+          "description": "CS usable energy",
+          "type": "number",
+          "units": "Wh",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 66,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": -1512.96,
+              "units": "Wh",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 1199.35,
+              "units": "Wh",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 78.0363636363637,
+              "units": "Wh",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 371.0,
+              "units": "Wh",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 887.797427387467,
+              "units": "Wh",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -0.14235,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": -1.40803,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vehicleList",
+      "description": "fill here",
+      "type": "table",
+      "count": 78,
+      "attributes": [
+        {
+          "name": "VehicleID",
+          "description": "Unique vehicle identifier",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "key",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 78,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            }
+          ]
+        },
+        {
+          "name": "Year",
+          "description": "Vehicle model year",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 78,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "2013",
+                  "frequencyN": 37,
+                  "frequencyPercent": 47.436
+                },
+                {
+                  "name": "2015",
+                  "frequencyN": 20,
+                  "frequencyPercent": 25.641
+                },
+                {
+                  "name": "2014",
+                  "frequencyN": 15,
+                  "frequencyPercent": 19.231
+                },
+                {
+                  "name": "2016",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "2012",
+                  "frequencyN": 2,
+                  "frequencyPercent": 2.564
+                }
+              ]
+            },
+            {
+              "name": "Minimum Value",
+              "value": 2012,
+              "units": "n/a",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 2016,
+              "units": "n/a",
+              "description": "Maximum value for attribute/column"
+            }
+          ]
+        },
+        {
+          "name": "Make",
+          "description": "Vehicle make/manufacturer name",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 78,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 11,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "Ford",
+                  "frequencyN": 16,
+                  "frequencyPercent": 20.513
+                },
+                {
+                  "name": "Chevrolet",
+                  "frequencyN": 16,
+                  "frequencyPercent": 20.513
+                },
+                {
+                  "name": "BMW",
+                  "frequencyN": 8,
+                  "frequencyPercent": 10.256
+                },
+                {
+                  "name": "Volkswagen",
+                  "frequencyN": 8,
+                  "frequencyPercent": 10.256
+                },
+                {
+                  "name": "Honda",
+                  "frequencyN": 8,
+                  "frequencyPercent": 10.256
+                },
+                {
+                  "name": "Mercedes",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Nissan",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Smart",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Kia",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Toyota",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Mitsubishi",
+                  "frequencyN": 2,
+                  "frequencyPercent": 2.564
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Model",
+          "description": "Vehicle model name",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 78,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 19,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "Volt",
+                  "frequencyN": 8,
+                  "frequencyPercent": 10.256
+                },
+                {
+                  "name": "ElectricDriveCoupe",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "B-Class",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "FusionEnergi",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "i3 REX",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Accord",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "CMaxHybrid",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Malibu",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "CMaxEnergi",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Leaf",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Soul",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "JettaHybrid",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "CivicHybrid",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "E-Golf",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "i3 EV",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Prius",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "FocusEV",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Spark",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "iMiev",
+                  "frequencyN": 2,
+                  "frequencyPercent": 2.564
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "VehicleName",
+          "description": "Vehicle model name (alternate)",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 78,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 20,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "Volt",
+                  "frequencyN": 8,
+                  "frequencyPercent": 10.256
+                },
+                {
+                  "name": "Civic",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "B-Class",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Focus Hatchback",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "C-Max SE",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "i3 REX",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Prius Plug-in",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Accord",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Electric Drive Coupe",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Soul",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Jetta SE",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "C-Max Energi",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "E-Golf",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Fusion Energi SE",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Leaf S",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "i3 EV",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Malibu Eco",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Spark",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "iMiev ES",
+                  "frequencyN": 1,
+                  "frequencyPercent": 1.282
+                },
+                {
+                  "name": "iMiev SE",
+                  "frequencyN": 1,
+                  "frequencyPercent": 1.282
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "BatteryID",
+          "description": "Battery type identifier",
+          "type": "integer",
+          "units": "n/a",
+          "dataQualityClass": "key",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 78,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            }
+          ],
+          "refersTo": "batteryList.BatteryID"
+        },
+        {
+          "name": "BatteryManufacturer",
+          "description": "Battery manufacturer",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 78,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 12,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "LG Chem",
+                  "frequencyN": 16,
+                  "frequencyPercent": 20.513
+                },
+                {
+                  "name": "Panasonic",
+                  "frequencyN": 12,
+                  "frequencyPercent": 15.385
+                },
+                {
+                  "name": "Sanyo",
+                  "frequencyN": 8,
+                  "frequencyPercent": 10.256
+                },
+                {
+                  "name": "Blue Energy",
+                  "frequencyN": 8,
+                  "frequencyPercent": 10.256
+                },
+                {
+                  "name": "Samsung SDI",
+                  "frequencyN": 8,
+                  "frequencyPercent": 10.256
+                },
+                {
+                  "name": "Hitachi",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Deutsche ACCUmotive/Li-Tec",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "SK Innovation",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Primearth EV Energy Co.",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "AESC",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "Tesla",
+                  "frequencyN": 4,
+                  "frequencyPercent": 5.128
+                },
+                {
+                  "name": "GS Yuasa",
+                  "frequencyN": 2,
+                  "frequencyPercent": 2.564
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ChemistryType",
+          "description": "Battery chemistry type",
+          "type": "string",
+          "units": "n/a",
+          "dataQualityClass": "categorical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 78,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 1,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "Lithium-ion",
+                  "frequencyN": 78,
+                  "frequencyPercent": 100.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "NumofCells",
+          "description": "Number of cells in the battery",
+          "type": "integer",
+          "units": "cells",
+          "dataQualityClass": "numerical",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 78,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 32,
+              "units": "cells",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 3696,
+              "units": "cells",
+              "description": "Maximum value for attribute/column"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

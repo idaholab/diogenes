@@ -1,0 +1,4 @@
+,error_ID,table_name,location_ID,error_probability
+0,0,vehicleList,KeyLocationEnum.MISSING_PRIMARY_KEY,0.8
+1,3,vehicleList,KeyLocationEnum.MISSING_PRIMARY_KEY,0.8
+2,4,vehicleList,KeyLocationEnum.MISSING_PRIMARY_KEY,0.8

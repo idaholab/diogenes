@@ -1,0 +1,8 @@
+name,lower_bound,upper_bound,description
+Kurtosis,-1,1,kurtosis
+Skewness,-0.5,0.5,skewness
+Date,1915,2200,date
+Date-Time,n/a,n/a,date-time
+Date-Format,n/a,n/a,date-format
+Frequency_Threshold,0.1,n/a,
+Monotonicity,0.5,1,monotonicity ratio

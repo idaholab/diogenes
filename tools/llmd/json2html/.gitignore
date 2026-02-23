@@ -1,0 +1,5 @@
+# Ignore any JSON files here, since we are presumably working with them:
+*.json
+
+# ... and any PDFs:
+*.pdf

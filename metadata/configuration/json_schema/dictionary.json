@@ -1,0 +1,508 @@
+{
+  "definitions": {
+    "frequencyDistribution": {
+      "$id": "#/definitions/frequencyDistribution",
+      "type": "array",
+      "description": "Frequency distribution by category name",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "frequencyN"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/definitions/frequencyDistribution/items/properties/category",
+            "description": "Name of this category or group in the frequency distribution",
+            "type": [
+              "string",
+              "integer",
+              "number"
+            ]
+          },
+          "frequencyN": {
+            "$id": "#/definitions/frequencyDistribution/items/properties/frequencyN",
+            "description": "Count of entries in this category or group in the frequency distribution",
+            "type": "integer",
+            "minimum": 0
+          },
+          "frequencyPercent": {
+            "$id": "#/definitions/frequencyDistribution/items/properties/frequencyPercent",
+            "description": "Percent of entries in this category or group in the frequency distribution",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "additionalProperties": {
+          "type": "string"
+        }
+      }
+    },
+
+    "dataQualityMetrics": {
+      "$id": "#/definitions/dataQualityMetrics",
+      "type": "array",
+      "description": "Set of data quality metrics for this entity",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "value",
+          "units"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name/title for this data quality metric",
+            "minLength": 1
+          },
+          "value": {
+            "type": [
+              "string",
+              "integer",
+              "number"
+            ],
+            "description": "Value for this data quality metric",
+            "minLength": 1
+          },
+          "units": {
+            "type": "string",
+            "description": "Units, if applicable, for this data quality metric; if not applicable, should be specified as \"n/a\"",
+            "examples": [
+              "n/a",
+              "%"
+            ],
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of this data quality metric",
+            "minLength": 1
+          },
+          "frequencies": {
+            "$ref": "#/definitions/frequencyDistribution"
+          }
+        },
+        "additionalProperties": {
+          "type": "string"
+        }
+      }
+    },
+
+    "datasetDataQualitySummary": {
+      "$id": "#/definitions/datasetDataQualitySummary",
+      "type": "object",
+      "description": "Summary of data quality for dataset",
+      "required": [
+        "measures",
+        "referenceURL"
+      ],
+      "properties": {
+        "measures": {
+          "type": "array",
+          "description": "Set of measures describing the quality of the object",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "value"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name/title for this data quality summary metric",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of this data quality summary metric",
+                "minLength": 1
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "integer",
+                  "number"
+                ],
+                "description": "Value for this data quality summary metric",
+                "minLength": 1
+              },
+              "units": {
+                "type": "string",
+                "description": "Units, if any, for this data quality summary metric",
+                "minLength": 1
+              },
+              "showAsSummary": {
+                "type": "boolean",
+                "description": "Designation of whether this entry is considered to the overall summary score for the object; if not specified, assumed to be false"
+              },
+              "showAsGraphic": {
+                "type": "boolean",
+                "description": "Designation of whether this entry is to be included in an optional graphic (e.g., a chart) summarizing the quality of the object; if not specified, assumed to be false"
+              },
+              "graphicLegend": {
+                "type": "string",
+                "description": "Legend to be used for this entry if it is to be included in an optional graphic summarizing the quality of the object",
+                "minLength": 1
+              },
+              "notes": {
+                "type": "string",
+                "description": "Notes, if any, to accompany this entry",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "referenceURL": {
+          "description": "URL for reference providing additional information about the data quality summary",
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "string",
+              "format": "uri-reference"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "description": "Notes, if any, providing additional relevant context for the quality characterization of the dataset or object",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+
+    "objectDataQualitySummary": {
+      "$id": "#/definitions/objectDataQualitySummary",
+      "type": "object",
+      "description": "Summary of data quality for an object in a dataset",
+      "required": [
+        "measures"
+      ],
+      "properties": {
+        "measures": {
+          "type": "array",
+          "description": "Set of measures describing the quality of the object",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "value"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name/title for this data quality summary metric",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of this data quality summary metric",
+                "minLength": 1
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "integer",
+                  "number"
+                ],
+                "description": "Value for this data quality summary metric",
+                "minLength": 1
+              },
+              "units": {
+                "type": "string",
+                "description": "Units, if any, for this data quality summary metric",
+                "minLength": 1
+              },
+              "showAsSummary": {
+                "type": "boolean",
+                "description": "Designation of whether this entry is considered to the overall summary score for the object; if not specified, assumed to be false"
+              },
+              "showAsGraphic": {
+                "type": "boolean",
+                "description": "Designation of whether this entry is to be included in an optional graphic (e.g., a chart) summarizing the quality of the object; if not specified, assumed to be false"
+              },
+              "graphicLegend": {
+                "type": "string",
+                "description": "Legend to be used for this entry if it is to be included in an optional graphic summarizing the quality of the object",
+                "minLength": 1
+              },
+              "notes": {
+                "type": "string",
+                "description": "Notes, if any, to accompany this entry",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "notes": {
+          "type": "string",
+          "description": "Notes, if any, providing additional relevant context for the quality characterization of the dataset or object",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    }, 
+
+    "relationships": {
+      "$id": "#/properties/objects/items/properties/relationships",
+      "type": "object",
+      "description": "The structural key mappings of this table", 
+      "anyOf": [
+        {
+          "required": [
+            "refersToPrimaryKeyTables"
+          ]
+        }, 
+        {
+          "required": [
+            "primaryKeys"
+          ]
+        }
+      ], 
+      "properties": {
+        "refersToPrimaryKeyTables": {
+          "$id": "#/properties/objects/items/properties/relationships/items/properties/refersToPrimaryKeyTables",
+          "description": "A list of primary key tables that are referred to by the foreign keys in this table",
+          "type": "object",
+          "minProperties": 1, 
+          "patternProperties": {
+            "^(?!\\s*$).+": { 
+              "description": "Name of the primary key table being referred to by the foreign key table", 
+              "type": "array",
+              "items": {
+                "description": "A description of the mapping from the foreign key to the primary key",
+                "type": "object",
+                "required": [
+                  "foreignKey",
+                  "foreignKeyRefersTo", 
+                  "keyID"
+                ],
+                "properties": {
+                  "foreignKey": {
+                    "description": "The name of the foreign key attribute in the foreign key table",
+                    "type": "string"
+                  },
+                  "foreignKeyRefersTo": {
+                    "description": "The name of the primary key attribute in the primary key table",
+                    "type": "string"
+                  },
+                  "keyID": {
+                    "description": "Used to differentiate between multiple foreign keys (in the same table) that reference the same primary key", 
+                    "type": "integer"
+                  }
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        }, 
+        "primaryKeys": {
+          "$id": "#/properties/objects/items/properties/properties/relationships/items/properties/primaryKeys",
+          "description": "A list of all the attributes comprising the (potentially composite) primary key",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "description": "Name of the (potentially partial) primary key attribute", 
+            "type": "string"
+          }             
+        }
+      } 
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://livewire.energy.gov/api/schemas/dictionary/dictionary.json",
+  "type": "object",
+  "description": "Schema for Livewire Data Project Dataset Data Dictionary",
+  "required": [
+    "conformsTo",
+    "version",
+    "name",
+    "objects"
+  ],
+  "properties": {
+    "conformsTo": {
+      "title": "Version of Schema",
+      "description": "Version of Schema.",
+      "enum": [
+        "https://livewire.energy.gov/api/schemas/dictionary/dictionary.json"
+      ]
+    },
+    "version": {
+      "$id": "#/properties/version",
+      "type": "string",
+      "description": "Complete version identifier for the process used to produce the dictionary.",
+      "pattern": "^v?[0-9]+(\\.[0-9]+(\\.[0-9]+)?)?(\\-(alpha|beta|pre|dist))?$"
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "description": "Dictionary name or title",
+      "minLength": 1
+    },
+    "description": {
+      "$id": "#/properties/description",
+      "type": "string",
+      "description": "Dictionary description",
+      "minLength": 1
+    },
+    "modified": {
+      "$id": "#/properties/modified",
+      "type": "string",
+      "description": "Date in YYYY-MM-DD format when the dictionary was last modified, with optional time in 24-hour HH:MM[:SS[.FFFFFF]] format (where SS represents optional seconds, and FFFFFF represents fractional seconds with 1-6 digits of precision)",
+      "pattern": "^(19\\d{2}|2\\d{3})-((02-(0[1-9]|1[0-9]|2[0-9]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01])))( (([01][0-9])|(2[0-3])):[0-5][0-9](:[0-5][0-9](\\.\\d{1,6})?)?)?$"
+    },
+    "dataQualitySummary": {
+      "$ref": "#/definitions/datasetDataQualitySummary"
+    },
+    "objects": {
+      "$id": "#/properties/objects",
+      "type": "array",
+      "description": "Array of objects comprising the dataset",
+      "items": {
+        "$id": "#/properties/objects/items",
+        "type": "object",
+        "required": [
+          "name",
+          "attributes"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/properties/objects/items/properties/name",
+            "type": "string",
+            "description": "Object (table or class) name",
+            "minLength": 1
+          },
+          "type": {
+            "$id": "#/properties/objects/items/properties/type",
+            "type": "string",
+            "enum": [
+              "table",
+              "class"
+            ],
+            "description": "Object type"
+          },
+          "description": {
+            "$id": "#/properties/objects/items/properties/description",
+            "type": "string",
+            "description": "Object (table or class) description",
+            "minLength": 1
+          },
+          "count": {
+            "$id": "#/properties/objects/items/properties/count",
+            "type": "integer",
+            "description": "Count of items in object (e.g., rows in a table)",
+            "minimum": 0
+          },
+          "relationships": {
+            "$ref": "#/definitions/relationships"
+          },  
+          "dataQualitySummary": {
+            "$ref": "#/definitions/objectDataQualitySummary"
+          },
+          "attributes": {
+            "$id": "#/properties/objects/items/properties/attributes",
+            "type": "array",
+            "items": {
+              "$id": "#/properties/objects/items/properties/attributes/items",
+              "type": "object",
+              "required": [
+                "name",
+                "type"
+              ],
+              "properties": {
+                "name": {
+                  "$id": "#/properties/objects/items/properties/attributes/items/properties/name",
+                  "type": "string",
+                  "description": "Attribute/column name",
+                  "minLength": 1
+                },
+                "type": {
+                  "$id": "#/properties/objects/items/properties/attributes/items/properties/type",
+                  "type": "string",
+                  "enum": [
+                    "string",
+                    "integer",
+                    "float",
+                    "boolean",
+                    "date",
+                    "time",
+                    "date-time",
+                    "sequence",
+                    "json",
+                    "xml",
+                    "blob",
+                    "(redacted)", 
+                    "none"
+                  ],
+                  "description": "Attribute/column type"
+                },
+                "description": {
+                  "$id": "#/properties/objects/items/properties/attributes/items/properties/description",
+                  "type": "string",
+                  "description": "Attribute/column description",
+									"minLength": 1
+                },
+                "units": {
+                  "$id": "#/properties/objects/items/properties/attributes/items/properties/units",
+                  "type": "string",
+                  "description": "Attribute/column units, if applicable"
+                },
+                "dataQuality": {
+                  "$ref": "#/definitions/dataQualityMetrics"
+                },
+                "dataQualityClass": {
+                  "$id": "#/properties/objects/items/properties/attributes/items/properties/dataQualityClass",
+                  "type": "string",
+                  "description": "Attribute/column class from a data quality perspective; if not specified, assumed to be none",
+                  "enum": [
+                    "primary_key", 
+                    "composite_primary_key",
+                    "composite_primary_key_foreign_key",
+                    "foreign_key",
+                    "composite_foreign_key",
+                    "numerical",
+                    "categorical",
+                    "date",
+                    "timestamp",
+                    "none"
+                  ]
+                }
+              },
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "additionalProperties": {
+          "type": "string"
+        }
+      }
+    },
+    "additionalProperties": {
+      "type": "string"
+    }
+  }
+}

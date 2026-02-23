@@ -1,0 +1,32 @@
+﻿unit,lower_bound,upper_bound,description
+V,N/A,N/A,Volt
+percent,N/A,N/A,Percent
+A,N/A,N/A,Amp
+Ah,N/A,N/A,Amp Hours
+W,N/A,N/A,Watt
+kW,0,350,KiloWatt
+kWh,N/A,N/A,KiloWatt Hour
+Wh,N/A,N/A,Watt Hour
+lbs,0,N/A,Pounds
+Ohms,N/A,N/A,Resistance
+m,0,N/A,Meters
+mi,0,1000000,Miles
+mpg,0,200,Miles Per Gallon
+ms,0,N/A,Milliseconds
+seconds,0,N/A,Seconds
+min,0,N/A,Minutes
+hr,0,N/A,Hours
+days,0,N/A,Days
+years,0,N/A,Years
+vehicles,0,N/A,Vehicles
+latitude,-90,90,Latitude
+longitude,-180,180,Longitude
+persons,0,N/A,Persons
+households,0,N/A,Households
+cars,0,N/A,Cars
+C,-50,200,Celsius
+km/h,0,200,Kilometres per hour
+l/h,0,50,Litres an hour
+mph,0,200,Miles per hour
+rpm,0,1000000,Revolutions per minute
+L,0,N/A,Litres

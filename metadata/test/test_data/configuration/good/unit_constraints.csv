@@ -1,0 +1,5 @@
+﻿unit,lower_bound,upper_bound,description
+V,N/A,N/A,Volt
+percent,0,100,Percent
+A,N/A,N/A,Amp
+Ah,-50,50,Amp Hours

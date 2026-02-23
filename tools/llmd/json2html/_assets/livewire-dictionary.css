@@ -1,0 +1,28 @@
+body { font-family: "IBM Plex Sans"; }
+
+div.section { break-after: always; page-break-after: always; }
+div.title-page header { margin: 0; padding: 13px; background-color: #262626; }
+
+h1, h2, h3, h4 { font-family: "IBM Plex Serif";}
+h3.object { break-before: always; page-break-before: always; }
+
+dt { font-weight: 700; }
+
+table { min-width: 67%; border-bottom: 1px solid #e0e0e0; font-size: 85%; }
+tr:nth-child(even) { background-color: #f8f8f8; }
+tr.summary, tr.summary td { border-top: 1px solid #e0e0e0; font-weight: bold; }
+th { background-color: #e8e8e8; }
+th, td { padding: 0.2em 0.67em; }
+td { vertical-align: top; font-family: "IBM Plex Sans Condensed"; }
+td.type { white-space: nowrap; }
+td.value { text-align: right; white-space: nowrap; }
+td.fd-header { text-align: center; }
+p.notes { font-family: "IBM Plex Sans Condensed"; font-size: 85%; }
+
+@media screen {
+	body { margin: 3em; }
+}
+
+@media print {
+	body { margin: 1em; }
+}

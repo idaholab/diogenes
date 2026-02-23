@@ -1,0 +1,237 @@
+{
+  "name": "Test of Insight - End to End",
+  "description": "This test includes the attendance.csv and temperatures.csv files.",
+  "modified": "Placeholder",
+  "authors": "Livewire Data Platform",
+  "referenceURL": "/api/datasets/test/files/placeholder.pdf",
+  "objects": [
+    {
+      "name": "attendance",
+      "count": 5,
+      "description": "Number of people who attended the event on a given day.",
+      "type": "table",
+      "attributes": [
+        {
+          "name": "num_persons",
+          "type": "integer",
+          "units": "n/a",
+          "description": "Number of people at the event",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 980,
+              "units": "n/a",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 1459,
+              "units": "n/a",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 1118.4,
+              "units": "n/a",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 1033.0,
+              "units": "n/a",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 197.786,
+              "units": "n/a",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": 1.86214,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 3.49641,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ],
+          "dataQualityClass": "numerical"
+        },
+        {
+          "name": "date",
+          "type": "date",
+          "units": "n/a",
+          "description": "Date of recording",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            }
+          ],
+          "dataQualityClass": "date"
+        },
+        {
+          "name": "temperature_record_id",
+          "type": "integer",
+          "units": "n/a",
+          "description": "ID of temperature record",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            }
+          ],
+          "dataQualityClass": "identifier",
+          "refersTo": "temperatures.record_id"
+        }
+      ]
+    },
+    {
+      "name": "temperatures",
+      "count": 5,
+      "description": "Temperatures on the day of the event.",
+      "type": "table",
+      "attributes": [
+        {
+          "name": "record_id",
+          "type": "integer",
+          "units": "n/a",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            }
+          ],
+          "dataQualityClass": "key"
+        },
+        {
+          "name": "temperature",
+          "type": "number",
+          "units": "F",
+          "description": "Temperature of the day",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Minimum Value",
+              "value": 72,
+              "units": "F",
+              "description": "Minimum value for attribute/column"
+            },
+            {
+              "name": "Maximum Value",
+              "value": 96,
+              "units": "F",
+              "description": "Maximum value for attribute/column"
+            },
+            {
+              "name": "Mean",
+              "value": 86.4,
+              "units": "F",
+              "description": "Statistical mean for values specified for attribute/column"
+            },
+            {
+              "name": "Median",
+              "value": 89.0,
+              "units": "F",
+              "description": "Statistical median for values specified for attribute/column"
+            },
+            {
+              "name": "Standard Deviation",
+              "value": 9.343,
+              "units": "F",
+              "description": "Statistical standard deviation for values specified for attribute/column"
+            },
+            {
+              "name": "Skewness",
+              "value": -0.99475,
+              "units": "n/a",
+              "description": "Statistical measure of the asymmetry of the distribution of the values for this attribute/column relative to its mean."
+            },
+            {
+              "name": "Kurtosis",
+              "value": 0.63607,
+              "units": "n/a",
+              "description": "Statistical measure of the shape (peakedness) of the distribution of the values for this attribute/column."
+            }
+          ],
+          "dataQualityClass": "numerical"
+        },
+        {
+          "name": "city",
+          "type": "string",
+          "units": "n/a",
+          "description": "City temperature was recorded in",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            },
+            {
+              "name": "Number of Categories",
+              "value": 3,
+              "units": "n/a",
+              "description": "Number of distinct/unique values for attribute/column",
+              "frequencies": [
+                {
+                  "name": "Rexburg",
+                  "frequencyN": 2,
+                  "frequencyPercent": 40.0
+                },
+                {
+                  "name": "Rigby",
+                  "frequencyN": 2,
+                  "frequencyPercent": 40.0
+                },
+                {
+                  "name": "Idaho Falls",
+                  "frequencyN": 1,
+                  "frequencyPercent": 20.0
+                }
+              ]
+            }
+          ],
+          "dataQualityClass": "categorical"
+        },
+        {
+          "name": "date",
+          "type": "date",
+          "units": "n/a",
+          "description": "Date temperature was recorded",
+          "dataQuality": [
+            {
+              "name": "Count",
+              "value": 5,
+              "units": "n/a",
+              "description": "Number of rows with attribute/column specified"
+            }
+          ],
+          "dataQualityClass": "date"
+        }
+      ]
+    }
+  ]
+}

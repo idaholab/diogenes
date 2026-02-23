@@ -1,0 +1,4 @@
+constraint	lower_bound	upper_bound	description
+kurtosis	0	1	N/A
+skew	0	1	N/A
+date	0	1	N/A

@@ -1,0 +1,38 @@
+VehicleID,Year,Make,Model,BatteryID,BatteryManufacturer,ICD_Number,ICD,Vehicle_Odometer_miles,Date_Of_Test,Measured_Average_Capacity_Ah,Measured_Average_Energy_Capacity_kWh,Discharge_30s__Power_Capability_at_80pct_DOD_kW,Charge_10s_Power_Capability_at_20pct_DOD_kW,CD_Usable_Energy_Wh,CS_Usable_Energy_Wh
+41,2011,Chevrolet,Volt,(null),(null),2,ICD2,"64,042.00",6/6/2014,38.55,13.67,(null),(null),(null),(null)
+41,2011,Chevrolet,Volt,(null),(null),3,ICD3,"86,068.00",3/24/2015,36.49,13.19,(null),(null),(null),(null)
+41,2011,Chevrolet,Volt,(null),(null),4,EOT,"106,789.00",10/29/2015,35.62,12.86,(null),(null),(null),(null)
+42,2011,Chevrolet,Volt,(null),(null),2,ICD2,"75,199.00",6/17/2014,37.67,13.61,(null),(null),(null),(null)
+42,2011,Chevrolet,Volt,(null),(null),3,ICD3,"94,154.00",12/31/2014,36.64,13.25,(null),(null),(null),(null)
+42,2011,Chevrolet,Volt,(null),(null),4,EOT,"122,331.00",12/17/2015,35.59,12.85,(null),(null),(null),(null)
+3,2013,Chevrolet,Malibu,6,Hitachi,0,BOT,"4,429.00",1/2/2013,4.25,0.49,15.79,13.18,(null),(null)
+3,2013,Chevrolet,Malibu,6,Hitachi,1,ICD1,"34,284.00",5/15/1900,3.93,0.46,13.22,13.17,(null),(null)
+3,2013,Chevrolet,Malibu,6,Hitachi,2,ICD2,"108,302.00",5/27/2014,3.98,0.46,14.4,14.17,(null),(null)
+3,2013,Chevrolet,Malibu,6,Hitachi,3,ICD3,"160,003.00",10/28/2015,3.89,0.45,13.83,13.38,(null),(null)
+4,2013,Chevrolet,Malibu,6,Hitachi,0,BOT,"4,244.00",1/2/1900,3.88,0.45,13.8,15.73,(null),(null)
+4,2013,Chevrolet,Malibu,6,Hitachi,1,ICD1,"23,892.00",(null),3.77,0.44,12.38,14.47,(null),(null)
+4,2013,Chevrolet,Malibu,6,Hitachi,2,ICD2,"97,122.00",(null),3.69,0.42,13.24,15.98,(null),(null)
+4,2013,Chevrolet,Malibu,6,Hitachi,3,ICD3,"160,080.00",9/27/2016,3.42,0.39,10.96,17.32,(null),(null)
+48,2013,Chevrolet,Malibu,6,Hitachi,0,BOT,"5,715.00",1/2/2300,3.98,0.46,14.14,14.5,(null),(null)
+48,2013,Chevrolet,Malibu,6,Hitachi,1,ICD1,"35,411.00",6/13/2013,3.69,0.43,10.97,13.36,(null),(null)
+48,2013,Chevrolet,Malibu,6,Hitachi,2,ICD2,"96,500.00",7/19/2014,3.69,0.42,12.55,15.55,(null),(null)
+48,2013,Chevrolet,Malibu,6,Hitachi,3,ICD3,"159,975.00",2/16/2016,3.69,0.42,12.81,16.06,(null),(null)
+6,2013,Chevrolet,Malibu,6,Hitachi,0,BOT,"5,934.00",1/9/2013,3.83,0.44,13.59,15.38,(null),(null)
+6,2013,Chevrolet,Malibu,6,Hitachi,1,ICD1,"35,619.00",,3.74,0.43,12.3,14.7,(null),(null)
+6,2013,Chevrolet,Malibu,6,Hitachi,2,ICD2,"96,305.00",,3.74,0.43,13.32,15.77,(null),(null)
+6,2013,Chevrolet,Malibu,6,Hitachi,3,ICD3,"162,269.00",,3.58,0.41,12.74,17.42,(null),(null)
+,2013,Chevrolet,Volt,7,LG Chem,0,BOT,"4,492.00",,46.5,16.6,(null),(null),"1,190.00","1,190.00"
+,2013,Chevrolet,Volt,7,LG Chem,1,ICD1,"21,318.00",,46.01,16.44,(null),(null),"1,190.00","1,190.00"
+,2013,Chevrolet,Volt,7,LG Chem,2,ICD2,"59,808.00",7/18/2014,44.66,15.96,(null),(null),"1,160.00","1,160.00"
+,2013,Chevrolet,Volt,7,LG Chem,3,ICD3,"100,815.00",7/20/2015,42.86,15.32,(null),(null),"1,116.00","1,116.00"
+,2013,Chevrolet,Volt,7,LG Chem,4,EOT,"121,434.00",1/17/2016,42.52,15.2,(null),(null),"1,100.00","1,100.00"
+24,2013,Chevrolet,Volt,7,LG Chem,0,BOT,"4,979.00",1/26/2013,46.65,16.67,(null),(null),"1,199.35","1,199.35"
+24,2013,Chevrolet,Volt,7,LG Chem,1,ICD1,"23,956.00",6/7/2013,45.85,16.38,(null),(null),"1,181.24","1,181.24"
+24,2013,Chevrolet,Volt,7,LG Chem,2,ICD2,"70,776.00",6/14/2014,44.29,15.83,(null),(null),"1,140.00","1,140.00"
+24,2013,Chevrolet,Volt,7,LG Chem,3,ICD3,"117,319.00",8/11/2015,42.62,15.24,(null),(null),"1,110.00","1,110.00"
+24,2013,Chevrolet,Volt,7,LG Chem,4,EOT,"137,741.00",2/6/2016,42.08,15.04,(null),(null),"1,082.00","1,082.00"
+23,2013,Chevrolet,Volt,7,LG Chem,0,BOT,"4,007.00",12/13/2012,46.5,16.63,(null),(null),"1,190.00","1,190.00"
+23,2013,Chevrolet,Volt,7,LG Chem,1,ICD1,"13,821.00",6/18/2013,46,16.42,(null),(null),"1,188.87","1,188.87"
+23,2013,Chevrolet,Volt,7,LG Chem,2,ICD2,"60,121.00",6/10/2014,44.7,15.97,(null),(null),"1,150.00","1,150.00"
+23,2013,Chevrolet,Volt,7,LG Chem,3,ICD3,"100,215.00",5/29/2015,43.76,15.64,(null),(null),"1,135.00","1,135.00"
+23,2013,Chevrolet,Volt,7,LG Chem,4,EOT,"128,704.00",1/8/2016,42.08,15.06,(null),(null),"1,090.00","1,090.00"

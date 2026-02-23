@@ -1,0 +1,5 @@
+name,lower_bound,upper_bound,description
+Kurtosis,-1,1,kurtosis
+Skewness,-0.5,0.5,skewness
+Date,1915,2200,date
+Frequency_Threshold,5,n/a,

@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://livewire.energy.gov/api/schemas/dictionary/dictionary-excerpt.json",
+  "type": "object",
+  "description": "Schema for Livewire Data Project Dataset Data Dictionary Quality Characterization Excerpt",
+  "required": [
+    "conformsTo",
+    "dataQualitySummary"
+  ],
+  "properties": {
+    "conformsTo": {
+      "title": "Version of Schema",
+      "description": "Version of Schema.",
+      "enum": [
+        "https://livewire.energy.gov/api/schemas/dictionary/dictionary-excerpt.json"
+      ]
+    },
+    "dataQualitySummary": {
+      "$id": "#/definitions/dataQualitySummary",
+      "type": "object",
+      "title": "Data Quality Summary",
+      "description": "High-level summary of the data quality characterization provided for the dataset.",
+      "required": [
+        "measures",
+        "referenceURL"
+      ],
+      "properties": {
+    "measures": {
+      "type": "array",
+      "description": "Set of measures describing the quality of the object",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "value"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name/title for this data quality summary metric",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of this data quality summary metric",
+            "minLength": 1
+          },
+          "value": {
+            "type": [
+              "string",
+              "integer",
+              "number"
+            ],
+            "description": "Value for this data quality summary metric",
+            "minLength": 1
+          },
+          "units": {
+            "type": "string",
+            "description": "Units, if any, for this data quality summary metric",
+            "minLength": 1
+          },
+          "showAsSummary": {
+            "type": "boolean",
+            "description": "Designation of whether this entry is considered to the overall summary score for the object; if not specified, assumed to be false"
+          },
+          "showAsGraphic": {
+            "type": "boolean",
+            "description": "Designation of whether this entry is to be included in an optional graphic (e.g., a chart) summarizing the quality of the object; if not specified, assumed to be false"
+          },
+          "graphicLegend": {
+            "type": "string",
+            "description": "Legend to be used for this entry if it is to be included in an optional graphic summarizing the quality of the object",
+            "minLength": 1
+          },
+          "notes": {
+            "type": "string",
+            "description": "Notes, if any, to accompany this entry",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": {
+          "type": "string"
+        }
+      }
+    },
+    "referenceURL": {
+      "description": "URL for reference providing additional information about the data quality summary",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notes, if any, providing additional relevant context for the quality characterization of the dataset or object",
+      "minLength": 1
+        }
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "datasetMetrics": {
+      "$id": "#/definitions/datasetMetrics",
+      "type": "object",
+      "title": "Dataset Metrics",
+      "description": "Collection of dataset metrics to be included in the Livewire Data Platform's dataset user interface.",
+      "required": [
+        "measures"
+      ],
+      "properties": {
+        "measures": {
+          "type": "array",
+          "description": "",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "value"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name/title for this dataset metric",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of this dataset metric",
+                "minLength": 1
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "integer",
+                  "number"
+                ],
+                "description": "Value for this dataset metric",
+                "minLength": 1
+              },
+              "units": {
+                "type": "string",
+                "description": "Units, if any, for this dataset metric",
+                "minLength": 1
+              },
+              "notes": {
+                "type": "string",
+                "description": "Notes, if any, to accompany this entry",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "notes": {
+          "type": "string",
+          "description": "Notes, if any, providing additional relevant context for the metrics provided for this dataset",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": {
+    "type": "string"
+  }
+}
