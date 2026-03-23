@@ -12,6 +12,7 @@ from annotation_tool.start import start_annotation
 
 def main():
 
+    project_name = 'test'
     dataset_id = 'ds2'
     annotation_agent = 'ml_tree' #{"none": BaseAgent, "tree": TreeAgent, "ml_tree": MLTreeAgent}
 
@@ -19,7 +20,7 @@ def main():
 
     input_dir = os.path.join(cur_dir,'example_input')
     input_folder = os.path.join(input_dir, dataset_id)
-    output_dir = os.path.join(cur_dir,'output',dataset_id)
+    output_dir = os.path.join(cur_dir, 'output', project_name, dataset_id)
     description_path = os.path.join(input_dir,'descriptive_information','descriptions.csv')
     annotations_path = os.path.join(input_folder, "descriptive_information", "annotations.xlsx")
 
