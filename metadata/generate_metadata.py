@@ -117,9 +117,17 @@ def run_metadata_generation(
     final_metadata_writer.write_data_quality_excerpt()
 
 def main():
-    
+    import os
+    import sys
+    import datetime
+
     parser = argparse.ArgumentParser(description='Generate Low Level Metadata (LLMD) for Livewire Project')
-    parser.add_argument('-id', '--identifier', help="The name of the dataset's identifier in the partial metadata", type=str, required=True)
+
+    # Project / dataset shortcuts (mirrors example_main.py)
+    parser.add_argument('-proj', '--project', help="Project name (used with --dataset to auto-construct input/output paths)", type=str, required=False)
+    parser.add_argument('-ds', '--dataset', help="Dataset ID (used with --project to auto-construct paths; also used as identifier when --identifier is omitted)", type=str, required=False)
+
+    parser.add_argument('-id', '--identifier', help="The name of the dataset's identifier in the partial metadata (defaults to --dataset when --project/--dataset are used)", type=str, required=False)
     parser.add_argument('-ext', '--file_extension', help="The type of extension for the file (.txt,.csv,etc...)", type=str, default='.csv')
     parser.add_argument('-d', '--delimiter', help="File delimiter", type=str, default=',')
     parser.add_argument('-m', '--mode', help="Full data quality analysis (full or f) or scorecard distillation (distill or d) from error catalog", default='f')
@@ -128,15 +136,88 @@ def main():
     parser.add_argument('-to_pdf', '--skip_to_pdf_generation', help="Skip LLMD, data quality, schema validation, and create pdf immediately", default='false')
     parser.add_argument('-files_exist_error', '--files_exist_error', help="Raise an error if output files exist", default='false')
     parser.add_argument('-ignore_chars', '--ignore_bad_chars', help="true=Ignore bad characters and print them. false=Throw an error when attempting to print a bad character", default='false')
-    parser.add_argument('-i', '--input_path', help="Path to Input Directory", default="/", required=False)
-    parser.add_argument('-o', '--output_path', help="Path to Output Directory", default="/", required=False)
+    parser.add_argument('-i', '--input_path', help="Path to Input Directory (overridden by --project/--dataset if both are set)", default=None, required=False)
+    parser.add_argument('-o', '--output_path', help="Path to Output Directory (overridden by --project/--dataset if both are set)", default=None, required=False)
     parser.add_argument("-n", "--n_rows", help="Max Row Count", default=-1, required=False)
     parser.add_argument("-p", "--processes", help="Number of Processes to spawn for Sampling", default=1, required=False)
     parser.add_argument("-a", "--annotations", help="Use manual annotations, no inference.", default='False', required=False)
+
+    # Annotation tool options
+    parser.add_argument('--run_annotations', help="Run the annotation tool before metadata generation", action='store_true', default=False)
+    parser.add_argument('--annotation_agent', help="Annotation agent type (none, tree, ml_tree, tree2prob)", type=str, default='tree2prob')
+    parser.add_argument('--annotation_mode', help="How to handle existing annotation files: 'copy' renames them with a timestamp, 'overwrite' replaces them in place", choices=['copy', 'overwrite'], default='copy')
+
     args = parser.parse_args()
 
+    # Resolve project root (one level above this file: diogenes/)
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+    # Build paths from --project / --dataset when provided
+    if args.project and args.dataset:
+        input_folder = os.path.join(project_root, 'example_input', args.project, args.dataset)
+        output_path  = os.path.join(project_root, 'output', args.project, args.dataset)
+        description_path = os.path.join(project_root, 'example_input', args.project, 'descriptive_information', 'descriptions.csv')
+        identifier = args.identifier or args.dataset
+    else:
+        if not args.identifier:
+            parser.error("--identifier is required when --project/--dataset are not both provided")
+        input_folder     = args.input_path or '/'
+        output_path      = args.output_path or '/'
+        description_path = os.path.join(input_folder, '..', 'descriptive_information', 'descriptions.csv')
+        identifier       = args.identifier
+
+    # Normalise description_path (may not exist)
+    description_path = os.path.normpath(description_path)
+    if not os.path.exists(description_path):
+        description_path = None
+
+    # Annotation tool
+    if args.run_annotations:
+        # Ensure annotation_tool package is importable
+        if project_root not in sys.path:
+            sys.path.insert(0, project_root)
+        from annotation_tool.start import start_annotation
+
+        annotations_xlsx = os.path.join(input_folder, 'descriptive_information', 'annotations.xlsx')
+        annotations_txt  = os.path.join(input_folder, 'descriptive_information', 'annotations.txt')
+
+        if args.annotation_mode == 'copy':
+            stamp = datetime.datetime.now().strftime("%m%d%y%H%M")
+            if os.path.exists(annotations_xlsx):
+                os.rename(annotations_xlsx, os.path.join(input_folder, 'descriptive_information', f'annotations_{stamp}.xlsx'))
+            if os.path.exists(annotations_txt):
+                os.rename(annotations_txt, os.path.join(input_folder, 'descriptive_information', f'annotations_{stamp}.txt'))
+        else:  # overwrite: delete existing files so Annotator doesn't raise on them
+            if os.path.exists(annotations_xlsx):
+                os.remove(annotations_xlsx)
+            if os.path.exists(annotations_txt):
+                os.remove(annotations_txt)
+
+        start_annotation(
+            tree=args.annotation_agent,
+            output=os.path.join(input_folder, 'descriptive_information'),
+            desc=description_path,
+            counts=True,
+            input=os.path.join(input_folder, 'data'),
+        )
+    elif not os.path.exists(os.path.join(input_folder, 'descriptive_information', 'annotations.xlsx')):
+        response = input("No annotations.xlsx found. Would you like to generate one now? (y/n): ").strip().lower()
+        if response == 'y':
+            if project_root not in sys.path:
+                sys.path.insert(0, project_root)
+            from annotation_tool.start import start_annotation
+            start_annotation(
+                tree=args.annotation_agent,
+                output=os.path.join(input_folder, 'descriptive_information'),
+                desc=description_path,
+                counts=True,
+                input=os.path.join(input_folder, 'data'),
+            )
+        else:
+            print("Proceeding without annotations.")
+
     run_metadata_generation(
-        identifier=args.identifier,
+        identifier=identifier,
         file_extension=args.file_extension,
         delimiter=args.delimiter,
         mode=args.mode,
@@ -145,11 +226,11 @@ def main():
         skip_to_pdf_generation=args.skip_to_pdf_generation,
         files_exist_error=args.files_exist_error,
         ignore_bad_chars=args.ignore_bad_chars,
-        input_path=args.input_path,
-        output_path=args.output_path,
+        input_path=input_folder,
+        output_path=output_path,
         n_rows=args.n_rows,
         processes=args.processes,
-        annotations=args.annotations
+        annotations=args.annotations,
     )
 
 

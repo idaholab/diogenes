@@ -15,6 +15,7 @@ table_descriptions.json
 !*_constraints.csv
 !dictionary.json
 !requirements.txt
+!annotations.txt
 !annotations.xlsx
 !project_metadata.json
 /input

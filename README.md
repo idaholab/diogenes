@@ -51,7 +51,19 @@ The above command encompasses all the required arguments to run the Diogenes. Th
 * Run Diogenes:
 - Option 1: Command line.
     Change to the metadata folder. `cd metadata`
-    Paste this into the terminal. `python generate_metadata.py -id "ds2" -a "true" -i "../example_input/ds2"`
+    Paste one of these into the terminal. 
+    
+    * if annotations exist
+    `python generate_metadata.py -id ds2 -a true -i ../example_input/test/ds2 -o ../output/test/ds2` 
+
+    * generate a new annotations sheet. saves a timestamped copy of old one if it exists:
+    `python generate_metadata.py -proj test -ds ds2 --run_annotations -a true -i ../example_input/ -o ../output`
+  
+    * generate new annotations sheet with overwrite instead of timestamped copy:
+
+    `python generate_metadata.py -proj test -ds ds2 --run_annotations --annotation_mode overwrite -a true -i ../example_input/ -o ../output`
+
+
 - Option 2: Run the example_main.py script
 ***Notes:*** 
 *You have to remove the output folder before running each time* 
@@ -364,6 +376,7 @@ After the final PDF is generated the final metadata is generated. The two differ
 
 * `output/final/metadata/<dataset_identifier>.json` - The final full metadata that is provided to dataset users on the LDP repository
 * `output/final/metadata/<dataset_identifier>.quality-summary.json` - A data quality summary extract that is used by the LDP to show the users the data quality on the LDP repository
+* NOTE: The metadata version for a processed dataset is assigned in the attribute "VERITAS_VERSION" found at metadata_generation > metadata_generation > settings.py
 
 # Acknowledgements
 
