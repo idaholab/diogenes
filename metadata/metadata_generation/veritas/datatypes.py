@@ -28,7 +28,7 @@ class DataQualityClassEnum(Enum):
     CATEGORICAL = 'categorical'
     NUMERICAL = 'numerical'
     DATE = 'date'
-    DATE_TIME = 'date-time'
+    DATE_TIME = 'timestamp'
     TIME = 'time'
     NONE = 'none'
 

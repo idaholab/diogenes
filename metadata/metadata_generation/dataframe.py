@@ -471,19 +471,19 @@ class PandasDatasetFile(DatasetFile):
         return self._df[column_name].max()
 
     def std_dev(self, column_name: str) -> float:
-        return self._df[column_name].std()
+        return pd.to_numeric(self._df[column_name], errors='coerce').std()
 
     def mean(self, column_name: str) -> float:
-        return self._df[column_name].mean()
+        return pd.to_numeric(self._df[column_name], errors='coerce').mean()
 
     def median(self, column_name: str) -> float:
-        return self._df[column_name].median()
+        return pd.to_numeric(self._df[column_name], errors='coerce').median()
 
     def skewness(self, column_name: str) -> float:
-        return self._df[column_name].skew()
+        return pd.to_numeric(self._df[column_name], errors='coerce').skew()
 
     def kurtosis(self, column_name: str) -> float:
-        return self._df[column_name].kurt()
+        return pd.to_numeric(self._df[column_name], errors='coerce').kurt()
     
     def delta(self, column_name: str, drop_first_row: bool = True) -> pd.Series:
         delta = self._df[column_name].dropna()

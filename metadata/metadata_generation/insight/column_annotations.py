@@ -20,7 +20,8 @@ class ColumnAnnotations:
         dq_class = self.__excel_column_annotations['Data Quality Class'][self.__column_index]
         if dq_class.startswith('?'):
             dq_class = dq_class[1:]
-        
+        if dq_class == 'date-time':
+            dq_class = 'timestamp'
         return dq_class
 
     def llmd_type(self):

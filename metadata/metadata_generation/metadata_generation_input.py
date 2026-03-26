@@ -86,11 +86,29 @@ class MetadataGenerationInputReader:
         full_file_name_finder = FullFileNameFinder(data_directory_path)
         real_name_to_excel_name_map = {}
 
-        for excel_dataset_file_name in sorted(excel_annotations.sheet_names):
-            full_file_name = full_file_name_finder.get_full_file_name_from_part(excel_dataset_file_name)  
-            real_name_to_excel_name_map[full_file_name] = excel_dataset_file_name
-        
+        for sheet_name in excel_annotations.sheet_names:
+            data = pd.read_excel(excel_annotations, sheet_name=sheet_name)
+            found_names = False
+            if "Files" in data.columns:
+                for file_name in data["Files"]:
+                    if cls._valid_file_name(file_name):
+                        full_file_name = full_file_name_finder.get_full_file_name_from_part(file_name)
+                        real_name_to_excel_name_map[full_file_name] = sheet_name
+                        found_names = True
+
+            if not found_names:
+                full_file_name = full_file_name_finder.get_full_file_name_from_part(sheet_name)
+                real_name_to_excel_name_map[full_file_name] = sheet_name
+
         return real_name_to_excel_name_map
+
+    @staticmethod
+    def _valid_file_name(file_name):
+        if file_name != file_name:  # NaN check
+            return False
+        if str(file_name) == "":
+            return False
+        return True
 
 
 class MetadataGenerationInput:

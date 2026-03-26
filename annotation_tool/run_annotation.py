@@ -4,9 +4,9 @@ import os
 
 # There's got to be a better way...
 from .Annotator import Annotator, create_counts
-from .Agents import BaseAgent, TreeAgent, MLTreeAgent
+from .Agents import BaseAgent, TreeAgent, Tree2ProbAgent, MLTreeAgent
 
-ASSIST_AGENTS = {"none": BaseAgent, "tree": TreeAgent, "ml_tree": MLTreeAgent}
+ASSIST_AGENTS = {"none": BaseAgent, "tree": TreeAgent, "tree2prob": Tree2ProbAgent, "ml_tree": MLTreeAgent}
 
 
 def run_annotation(tree, output, desc, counts, input):

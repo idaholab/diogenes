@@ -171,9 +171,9 @@ class MetricJSONBlocksFactory:
             DataQualityClassEnum.SEQUENCE :                          ['n'], 
             DataQualityClassEnum.NUMERICAL :                         ['n','min','max','mean','median','std_dev','skewness','kurtosis'],
             DataQualityClassEnum.CATEGORICAL :                       ['n','ncat'],
-            DataQualityClassEnum.DATE :                              ['n'],
-            DataQualityClassEnum.DATE_TIME :                         ['n'],
-            DataQualityClassEnum.TIME:                               ['n'], 
+            DataQualityClassEnum.DATE :                              ['n'],#['n','min','max'],
+            DataQualityClassEnum.DATE_TIME :                         ['n'],#['n','min','max'],
+            DataQualityClassEnum.TIME:                               ['n'],#['n','min','max'], 
             DataQualityClassEnum.NONE :                              ['n']
         }
         

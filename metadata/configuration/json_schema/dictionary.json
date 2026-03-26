@@ -453,8 +453,8 @@
                     "json",
                     "xml",
                     "blob",
-                    "(redacted)", 
-                    "none"
+                    "(redacted)",
+                    "(none)"
                   ],
                   "description": "Attribute/column type"
                 },
@@ -486,6 +486,7 @@
                     "categorical",
                     "date",
                     "timestamp",
+                    "time",
                     "none"
                   ]
                 }
