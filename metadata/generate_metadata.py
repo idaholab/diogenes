@@ -154,9 +154,11 @@ def main():
 
     # Build paths from --project / --dataset when provided
     if args.project and args.dataset:
-        input_folder = os.path.join(project_root, 'example_input', args.project, args.dataset)
-        output_path  = os.path.join(project_root, 'output', args.project, args.dataset)
-        description_path = os.path.join(project_root, 'example_input', args.project, 'descriptive_information', 'descriptions.csv')
+        input_base_folder  = os.path.abspath(args.input_path) if args.input_path else project_root
+        output_base_folder = os.path.abspath(args.output_path) if args.output_path else project_root
+        input_folder = os.path.join(input_base_folder, args.project, args.dataset)
+        output_path  = os.path.join(output_base_folder, args.project, args.dataset)
+        description_path = os.path.join(input_base_folder, args.project, 'descriptive_information', 'descriptions.csv')
         identifier = args.identifier or args.dataset
     else:
         if not args.identifier:
