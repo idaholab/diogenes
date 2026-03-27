@@ -3,7 +3,6 @@
 import os
 import json
 
-from playwright.sync_api import sync_playwright
 
 from datetime import datetime
 
@@ -53,14 +52,33 @@ class VeritasFileWriter():
         JSON_writer.write_json(output_metadata_file_path)        
 
 
+_WEASYPRINT_PAGE_STYLE = """
+<style>
+@page {
+    size: letter;
+    margin: 20px 0 40px 0;
+    @bottom-center {
+        content: counter(page) " of " counter(pages);
+        font-size: 8px;
+        color: #000;
+    }
+}
+
+th { text-align: center; }
+td[colspan="3"] { min-width: 320px; }
+</style>
+"""
+
+
 class PDFGenerationFileWriter():
 
-    def __init__(self, error_when_file_exists, ignore_bad_chars_in_output):
+    def __init__(self, error_when_file_exists, ignore_bad_chars_in_output, pdf_engine='playwright'):
         self.__directory_creator = DirectoryCreator(error_when_file_exists)
         if ignore_bad_chars_in_output == True:
             self.__error_handling = 'ignore'
         else:
             self.__error_handling = 'strict'
+        self.__pdf_engine = pdf_engine
 
         """ def write_pdf(self, metadata_file_path, pdf_html):
         self.__directory_creator.create_directory(PDFGenerationFilePaths.output_pdf_directory_path)
@@ -71,8 +89,16 @@ class PDFGenerationFileWriter():
     def write_pdf(self, metadata_file_path, pdf_html):
 
         self.__directory_creator.create_directory(PDFGenerationFilePaths.output_pdf_directory_path)
-        output_pdf_file_path = PDFGenerationFilePaths.output_pdf_directory_path + '/' + FileNamer.get_pdf_file_name(metadata_file_path)    
-        
+        output_pdf_file_path = PDFGenerationFilePaths.output_pdf_directory_path + '/' + FileNamer.get_pdf_file_name(metadata_file_path)
+
+        if self.__pdf_engine == 'weasyprint':
+            self._write_pdf_weasyprint(pdf_html, output_pdf_file_path)
+        else:
+            self._write_pdf_playwright(pdf_html, output_pdf_file_path)
+
+    def _write_pdf_playwright(self, pdf_html, output_pdf_file_path):
+        from playwright.sync_api import sync_playwright
+
         with sync_playwright() as p:
 
             browser = p.chromium.launch(args=["--enable-local-file-accesses","--allow-file-access-from-files"])
@@ -116,6 +142,16 @@ class PDFGenerationFileWriter():
                 margin={"top": "20px", "bottom": "40px"}
             )
             browser.close()
+
+    def _write_pdf_weasyprint(self, pdf_html, output_pdf_file_path):
+        from weasyprint import HTML, CSS
+
+        # Inject CSS page counter style for footer and page size
+        html_with_page_style = pdf_html.replace('</head>', _WEASYPRINT_PAGE_STYLE + '</head>', 1)
+        if '</head>' not in pdf_html:
+            html_with_page_style = _WEASYPRINT_PAGE_STYLE + pdf_html
+
+        HTML(string=html_with_page_style).write_pdf(output_pdf_file_path)
 
  
     def write_html(self, metadata_file_path, pdf_html):

@@ -25,7 +25,7 @@ class PDFGenerator:
         return metadata
 
 
-    def generate_pdf_from_json(self, error_when_file_exists, ignore_bad_chars_in_output):
+    def generate_pdf_from_json(self, error_when_file_exists, ignore_bad_chars_in_output, pdf_engine='playwright'):
         input_file_path_finder = InputFilePathFinder()
         metadata_file_path = input_file_path_finder.get_metadata_file_path(
             PDFGenerationFilePaths.input_metadata_directory_path)
@@ -40,4 +40,4 @@ class PDFGenerator:
         for current_table_index in metadata_iterator.iterate_table():
             pdf_builder.add_table_pages(current_table_index, metadata_iterator)
 
-        pdf_builder.print(metadata_file_path, error_when_file_exists, ignore_bad_chars_in_output)
+        pdf_builder.print(metadata_file_path, error_when_file_exists, ignore_bad_chars_in_output, pdf_engine)

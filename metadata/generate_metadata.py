@@ -38,7 +38,8 @@ def run_metadata_generation(
     output_path='/',
     n_rows=-1,
     processes=1,
-    annotations='False'
+    annotations='False',
+    pdf_engine='playwright'
 ):
     """
     Generate Low Level Metadata (LLMD) for Livewire Project.
@@ -58,6 +59,7 @@ def run_metadata_generation(
         n_rows (int): Max Row Count
         processes (int): Number of Processes to spawn for Sampling
         annotations (str): Use manual annotations, no inference
+        pdf_engine (str): PDF rendering engine ('playwright' or 'weasyprint')
     """
 
     settings = MetadataGenerationSettings()
@@ -110,7 +112,7 @@ def run_metadata_generation(
     ignore_bad_chars_in_output = convert_string_to_bool(ignore_bad_chars)
 
     pdf_generator = PDFGenerator()
-    pdf_generator.generate_pdf_from_json(error_when_files_exist, ignore_bad_chars_in_output)   
+    pdf_generator.generate_pdf_from_json(error_when_files_exist, ignore_bad_chars_in_output, pdf_engine)
 
     final_metadata_writer = FinalMetadataWriter(error_when_files_exist, ignore_bad_chars_in_output)
     final_metadata_writer.write_metadata_with_url()
@@ -141,6 +143,7 @@ def main():
     parser.add_argument("-n", "--n_rows", help="Max Row Count", default=-1, required=False)
     parser.add_argument("-p", "--processes", help="Number of Processes to spawn for Sampling", default=1, required=False)
     parser.add_argument("-a", "--annotations", help="Use manual annotations, no inference.", default='False', required=False)
+    parser.add_argument("--pdf_engine", help="PDF rendering engine to use: 'playwright' (default) or 'weasyprint' (recommended for Linux headless environments)", choices=['playwright', 'weasyprint'], default='weasyprint')
 
     # Annotation tool options
     parser.add_argument('--run_annotations', help="Run the annotation tool before metadata generation", action='store_true', default=False)
@@ -233,6 +236,7 @@ def main():
         n_rows=args.n_rows,
         processes=args.processes,
         annotations=args.annotations,
+        pdf_engine=args.pdf_engine,
     )
 
 

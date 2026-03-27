@@ -52,9 +52,9 @@ class PDFBuilder:
         data_quality_pdf_table_builder.render_table()
         self.__livewire_pdf.ln()
 
-    def print(self, metadata_file_name, error_when_file_exists, ignore_bad_chars_in_output):
+    def print(self, metadata_file_name, error_when_file_exists, ignore_bad_chars_in_output, pdf_engine='playwright'):
         pdf_html = self.__html_builder.get_html()
-        pdf_generation_file_writer = PDFGenerationFileWriter(error_when_file_exists, ignore_bad_chars_in_output)
+        pdf_generation_file_writer = PDFGenerationFileWriter(error_when_file_exists, ignore_bad_chars_in_output, pdf_engine)
         pdf_generation_file_writer.write_pdf(metadata_file_name, pdf_html)
         pdf_generation_file_writer.write_html(metadata_file_name, pdf_html)
 

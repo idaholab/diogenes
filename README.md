@@ -58,6 +58,8 @@ The above command encompasses all the required arguments to run the Diogenes. Th
 
     * generate a new annotations sheet. saves a timestamped copy of old one if it exists:
     `python generate_metadata.py -proj test -ds ds2 --run_annotations -a true -i ../example_input/ -o ../output`
+
+    `python generate_metadata.py --pdf_engine weasyprint -proj test -ds ds2 --run_annotations -a true -i ../example_input/ -o ../output`
   
     * generate new annotations sheet with overwrite instead of timestamped copy:
 
