@@ -96,8 +96,68 @@ class PDFGenerationFileWriter():
         else:
             self._write_pdf_playwright(pdf_html, output_pdf_file_path)
 
+    _FONT_MAP = {
+        'IBMPlexSans-Regular.woff2':          ('IBM Plex Sans',           'normal', '400'),
+        'IBMPlexSans-Bold.woff2':             ('IBM Plex Sans',           'normal', '700'),
+        'IBMPlexSans-Italic.woff2':           ('IBM Plex Sans',           'italic', '400'),
+        'IBMPlexSansCondensed-Regular.woff2': ('IBM Plex Sans Condensed', 'normal', '400'),
+        'IBMPlexSerif-Regular.woff2':         ('IBM Plex Serif',          'normal', '400'),
+        'IBMPlexSerif-Bold.woff2':            ('IBM Plex Serif',          'normal', '700'),
+    }
+    _FONT_BASE_URL = 'https://unpkg.com/@ibm/plex@6.4.0'
+    _FONT_URL_PATHS = {
+        'IBMPlexSans-Regular.woff2':          'IBM-Plex-Sans/fonts/complete/woff2/IBMPlexSans-Regular.woff2',
+        'IBMPlexSans-Bold.woff2':             'IBM-Plex-Sans/fonts/complete/woff2/IBMPlexSans-Bold.woff2',
+        'IBMPlexSans-Italic.woff2':           'IBM-Plex-Sans/fonts/complete/woff2/IBMPlexSans-Italic.woff2',
+        'IBMPlexSansCondensed-Regular.woff2': 'IBM-Plex-Sans-Condensed/fonts/complete/woff2/IBMPlexSansCondensed-Regular.woff2',
+        'IBMPlexSerif-Regular.woff2':         'IBM-Plex-Serif/fonts/complete/woff2/IBMPlexSerif-Regular.woff2',
+        'IBMPlexSerif-Bold.woff2':            'IBM-Plex-Serif/fonts/complete/woff2/IBMPlexSerif-Bold.woff2',
+    }
+
+    def _download_fonts(self, fonts_dir):
+        import urllib.request
+        os.makedirs(fonts_dir, exist_ok=True)
+        for filename, url_path in self._FONT_URL_PATHS.items():
+            dest = os.path.join(fonts_dir, filename)
+            if os.path.isfile(dest):
+                continue
+            url = f'{self._FONT_BASE_URL}/{url_path}'
+            try:
+                print(f'Downloading font: {filename}')
+                urllib.request.urlretrieve(url, dest)
+            except Exception as e:
+                print(f'Warning: could not download {filename}: {e}')
+
+    def _inject_bundled_fonts(self, html):
+        """Embed IBM Plex fonts as base64 @font-face rules.
+
+        Downloads fonts from unpkg on first use and caches them in _assets/fonts/
+        relative to the current working directory. This ensures text renders on
+        Linux servers with no system fonts installed.
+        """
+        import base64
+        fonts_dir = os.path.join(os.getcwd(), '_assets', 'fonts')
+        self._download_fonts(fonts_dir)
+
+        font_face_css = ''
+        for filename, (family, style, weight) in self._FONT_MAP.items():
+            path = os.path.join(fonts_dir, filename)
+            if os.path.isfile(path):
+                with open(path, 'rb') as f:
+                    b64 = base64.b64encode(f.read()).decode('ascii')
+                font_face_css += (
+                    f"@font-face {{ font-family: '{family}'; font-style: {style}; "
+                    f"font-weight: {weight}; src: url('data:font/woff2;base64,{b64}') format('woff2'); }}\n"
+                )
+
+        if font_face_css:
+            html = html.replace('<style>', '<style>\n' + font_face_css, 1)
+        return html
+
     def _write_pdf_playwright(self, pdf_html, output_pdf_file_path):
         from playwright.sync_api import sync_playwright
+
+        pdf_html = self._inject_bundled_fonts(pdf_html)
 
         with sync_playwright() as p:
 
