@@ -101,12 +101,19 @@ class PDFGenerationFileWriter():
 
         with sync_playwright() as p:
 
-            browser = p.chromium.launch(args=["--enable-local-file-accesses","--allow-file-access-from-files"])
+            browser = p.chromium.launch(args=[
+                "--enable-local-file-accesses",
+                "--allow-file-access-from-files",
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+            ])
             context = browser.new_context()
             page = context.new_page()
 
             # Set the content of the page
             page.set_content(pdf_html, wait_until="networkidle")
+            # Wait for web fonts to finish loading before printing
+            page.evaluate("() => document.fonts.ready")
 
             footer_template = """
             <style>
