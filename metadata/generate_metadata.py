@@ -143,7 +143,7 @@ def main():
     parser.add_argument("-n", "--n_rows", help="Max Row Count", default=-1, required=False)
     parser.add_argument("-p", "--processes", help="Number of Processes to spawn for Sampling", default=1, required=False)
     parser.add_argument("-a", "--annotations", help="Use manual annotations, no inference.", default='False', required=False)
-    parser.add_argument("--pdf_engine", help="PDF rendering engine to use: 'playwright' (default) or 'weasyprint' (recommended for Linux headless environments)", choices=['playwright', 'weasyprint'], default='weasyprint')
+    parser.add_argument("--pdf_engine", help="PDF rendering engine to use: 'playwright' (default) or 'weasyprint' (recommended for Linux headless environments)", choices=['playwright', 'weasyprint'], default='playwright')
 
     # Annotation tool options
     parser.add_argument('--run_annotations', help="Run the annotation tool before metadata generation", action='store_true', default=False)
