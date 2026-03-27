@@ -27,12 +27,12 @@ class HTMLBuilder:
                       \n     {}\
                       \n   </title>\
                       \n   <style>\
-                      \n        body {{ font-family: \"IBM Plex Sans\"; }}\
+                      \n        body {{ font-family: \"IBM Plex Sans\", \"Liberation Sans\", \"DejaVu Sans\", Arial, sans-serif; }}\
                       \n\
                       \n        div.section {{ break-after: always; page-break-after: always; }}\
                       \n        div.title-page header {{ margin: 0; padding: 13px; background-color: #262626; }}\
                       \n\
-                      \n        h1, h2, h3, h4 {{ font-family: \"IBM Plex Serif\";}}\
+                      \n        h1, h2, h3, h4 {{ font-family: \"IBM Plex Serif\", \"Liberation Serif\", \"DejaVu Serif\", Georgia, serif;}}\
                       \n        h3.object {{ break-before: always; page-break-before: always; }}\
                       \n\
                       \n        dt {{ font-weight: 700; }}\
@@ -42,12 +42,12 @@ class HTMLBuilder:
                       \n        tr.summary, tr.summary td {{ border-top: 1px solid #e0e0e0; font-weight: bold; }}\
                       \n        th {{ background-color: #e8e8e8; }}\
                       \n        th, td {{ padding: 0.2em 0.67em; }}\
-                      \n        td {{ vertical-align: top; font-family: \"IBM Plex Sans Condensed\"; }}\
+                      \n        td {{ vertical-align: top; font-family: \"IBM Plex Sans Condensed\", \"Liberation Sans\", \"DejaVu Sans\", Arial, sans-serif; }}\
                       \n        td.dq-metric-name {{ white-space: nowrap; }}\
                       \n        td.type {{ white-space: nowrap; }}\
                       \n        td.value {{ text-align: right; white-space: nowrap; }}\
                       \n        td.fd-header {{ text-align: center; }}\
-                      \n        p.notes {{ font-family: \"IBM Plex Sans Condensed\"; font-size: 85%; }}\
+                      \n        p.notes {{ font-family: \"IBM Plex Sans Condensed\", \"Liberation Sans\", \"DejaVu Sans\", Arial, sans-serif; font-size: 85%; }}\
                       \n\
                       \n        @media screen {{\
                       \n        body {{ margin: 3em; }}\
