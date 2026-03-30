@@ -148,7 +148,7 @@ def main():
     # Annotation tool options
     parser.add_argument('--run_annotations', help="Run the annotation tool before metadata generation", action='store_true', default=False)
     parser.add_argument('--annotation_agent', help="Annotation agent type (none, tree, ml_tree, tree2prob)", type=str, default='tree2prob')
-    parser.add_argument('--annotation_mode', help="How to handle existing annotation files: 'copy' renames them with a timestamp, 'overwrite' replaces them in place", choices=['copy', 'overwrite'], default='copy')
+    parser.add_argument('--annotation_mode', help="How to handle existing annotation files: 'copy' renames them with a timestamp, 'overwrite' replaces them in place, 'skip_if_exists' skips annotation generation if annotations.xlsx already exists", choices=['copy', 'overwrite', 'skip_if_exists'], default='copy')
 
     args = parser.parse_args()
 
@@ -176,6 +176,29 @@ def main():
     if not os.path.exists(description_path):
         description_path = None
 
+    def review_annotations(annotations_txt_path):
+        """Print annotations.txt and prompt the user to continue or cancel."""
+        print("\n" + "=" * 60)
+        print("ANNOTATIONS REVIEW")
+        print("=" * 60)
+        if os.path.exists(annotations_txt_path):
+            with open(annotations_txt_path, 'r', encoding='utf-8', errors='replace') as f:
+                print(f.read())
+        else:
+            print(f"(annotations.txt not found at {annotations_txt_path})")
+        print("=" * 60)
+        print(f"\nAnnotations file: {annotations_txt_path}")
+        print("Review the annotations above. You may edit the file before continuing.")
+        while True:
+            choice = input("\nContinue with metadata generation? ([c]ontinue / [q]uit to modify): ").strip().lower()
+            if choice in ('c', 'continue', 'yes', 'y'):
+                return True
+            elif choice in ('q', 'quit', 'cancel', 'n', 'no'):
+                print("Exiting. Edit the annotations file and re-run when ready.")
+                sys.exit(0)
+            else:
+                print("Please enter 'c' to continue or 'q' to quit.")
+
     # Annotation tool
     if args.run_annotations:
         # Ensure annotation_tool package is importable
@@ -186,31 +209,21 @@ def main():
         annotations_xlsx = os.path.join(input_folder, 'descriptive_information', 'annotations.xlsx')
         annotations_txt  = os.path.join(input_folder, 'descriptive_information', 'annotations.txt')
 
-        if args.annotation_mode == 'copy':
-            stamp = datetime.datetime.now().strftime("%m%d%y%H%M")
-            if os.path.exists(annotations_xlsx):
-                os.rename(annotations_xlsx, os.path.join(input_folder, 'descriptive_information', f'annotations_{stamp}.xlsx'))
-            if os.path.exists(annotations_txt):
-                os.rename(annotations_txt, os.path.join(input_folder, 'descriptive_information', f'annotations_{stamp}.txt'))
-        else:  # overwrite: delete existing files so Annotator doesn't raise on them
-            if os.path.exists(annotations_xlsx):
-                os.remove(annotations_xlsx)
-            if os.path.exists(annotations_txt):
-                os.remove(annotations_txt)
+        if args.annotation_mode == 'skip_if_exists' and os.path.exists(annotations_xlsx):
+            print("annotations.xlsx already exists — skipping annotation generation.")
+        else:
+            if args.annotation_mode == 'copy':
+                stamp = datetime.datetime.now().strftime("%m%d%y%H%M")
+                if os.path.exists(annotations_xlsx):
+                    os.rename(annotations_xlsx, os.path.join(input_folder, 'descriptive_information', f'annotations_{stamp}.xlsx'))
+                if os.path.exists(annotations_txt):
+                    os.rename(annotations_txt, os.path.join(input_folder, 'descriptive_information', f'annotations_{stamp}.txt'))
+            elif args.annotation_mode == 'overwrite':  # delete existing files so Annotator doesn't raise on them
+                if os.path.exists(annotations_xlsx):
+                    os.remove(annotations_xlsx)
+                if os.path.exists(annotations_txt):
+                    os.remove(annotations_txt)
 
-        start_annotation(
-            tree=args.annotation_agent,
-            output=os.path.join(input_folder, 'descriptive_information'),
-            desc=description_path,
-            counts=True,
-            input=os.path.join(input_folder, 'data'),
-        )
-    elif not os.path.exists(os.path.join(input_folder, 'descriptive_information', 'annotations.xlsx')):
-        response = input("No annotations.xlsx found. Would you like to generate one now? (y/n): ").strip().lower()
-        if response == 'y':
-            if project_root not in sys.path:
-                sys.path.insert(0, project_root)
-            from annotation_tool.start import start_annotation
             start_annotation(
                 tree=args.annotation_agent,
                 output=os.path.join(input_folder, 'descriptive_information'),
@@ -218,6 +231,22 @@ def main():
                 counts=True,
                 input=os.path.join(input_folder, 'data'),
             )
+            review_annotations(annotations_txt)
+    elif not os.path.exists(os.path.join(input_folder, 'descriptive_information', 'annotations.xlsx')):
+        response = input("No annotations.xlsx found. Would you like to generate one now? (y/n): ").strip().lower()
+        if response == 'y':
+            if project_root not in sys.path:
+                sys.path.insert(0, project_root)
+            from annotation_tool.start import start_annotation
+            annotations_txt_implicit = os.path.join(input_folder, 'descriptive_information', 'annotations.txt')
+            start_annotation(
+                tree=args.annotation_agent,
+                output=os.path.join(input_folder, 'descriptive_information'),
+                desc=description_path,
+                counts=True,
+                input=os.path.join(input_folder, 'data'),
+            )
+            review_annotations(annotations_txt_implicit)
         else:
             print("Proceeding without annotations.")
 
